@@ -2,190 +2,159 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Attorneys - MonacoPI",
-  description: "Professional investigation services supporting legal professionals",
+  title: "For Attorneys - Monaco PI",
+  description: "Bulletproof evidence and court-ready reports for legal professionals. Expert witness testimony and rapid deployment.",
 };
-
-const services = [
-  {
-    title: "Witness Location & Interviews",
-    description: "Locate and interview witnesses to gather crucial testimony for your cases.",
-    icon: "👥",
-  },
-  {
-    title: "Evidence Collection",
-    description: "Professional evidence gathering that stands up in court proceedings.",
-    icon: "📋",
-  },
-  {
-    title: "Background Investigations",
-    description: "Comprehensive background checks on parties, witnesses, and jurors.",
-    icon: "🔍",
-  },
-  {
-    title: "Surveillance Operations",
-    description: "Expert surveillance for personal injury, workers comp, and fraud cases.",
-    icon: "📹",
-  },
-  {
-    title: "Asset Searches",
-    description: "Locate hidden assets for divorce, judgment enforcement, and financial disputes.",
-    icon: "💰",
-  },
-  {
-    title: "Expert Testimony",
-    description: "Professional testimony regarding investigation methods and findings.",
-    icon: "⚖️",
-  },
-];
 
 export default function ForAttorneysPage() {
   return (
-    <div>
+    <div className="bg-[#FAFAF9]">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">For Attorneys</h1>
-          <p className="text-xl text-blue-100">
-            Professional investigation support for your legal practice
+      <section className="min-h-[60vh] flex items-center justify-center bg-neutral-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900"></div>
+        
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10 text-center py-32">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight">
+            For Attorneys
+          </h1>
+          <p className="text-xl text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed">
+            Bulletproof evidence and court-ready documentation for legal professionals
           </p>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            At MonacoPI, we understand the critical role that thorough investigation plays
-            in building strong legal cases. Our team of licensed investigators works closely
-            with attorneys to provide reliable, court-admissible evidence and comprehensive
-            investigative support.
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
-            Whether you&apos;re preparing for trial, negotiating settlements, or need immediate
-            investigative assistance, we deliver professional results that strengthen your
-            legal position.
-          </p>
+      <section className="py-32 md:py-40">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl">
+            <p className="text-2xl md:text-3xl text-neutral-700 font-light leading-relaxed mb-12">
+              When the stakes are high and failure isn't an option, you need more than basic investigation services.
+            </p>
+            <p className="text-xl text-neutral-600 font-light leading-relaxed">
+              You need the elite expertise, absolute discretion, and proven results that discerning professionals trust. Our investigations deliver actionable intelligence that stands up in court.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Our Services for Legal Professionals
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg"
-              >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+      {/* Why Monaco PI */}
+      <section className="py-32 md:py-40 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500 mb-24">Why Monaco PI</h2>
+          
+          <div className="grid md:grid-cols-3 gap-16">
+            <div>
+              <div className="text-5xl font-light text-neutral-900 mb-6">95%+</div>
+              <h3 className="text-xl font-light text-neutral-900 mb-4 tracking-tight">
+                Case Resolution Rate
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed mb-6">
+                We maintain one of the industry's highest success rates because we only accept cases we're confident we can solve.
+              </p>
+              <p className="text-sm text-neutral-500 font-light italic">
+                "Seriously, you're the only ones who actually found him. Everyone else just took my money."
+              </p>
+            </div>
+
+            <div>
+              <div className="text-5xl font-light text-neutral-900 mb-6">17+</div>
+              <h3 className="text-xl font-light text-neutral-900 mb-4 tracking-tight">
+                Years Experience
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed">
+                Our team combines decades of experience from law enforcement, military intelligence, and legal system expertise. We don't just gather information – we deliver actionable intelligence that stands up in court.
+              </p>
+            </div>
+
+            <div>
+              <div className="text-5xl font-light text-neutral-900 mb-6">24-48h</div>
+              <h3 className="text-xl font-light text-neutral-900 mb-4 tracking-tight">
+                Case Deployment
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed mb-6">
+                When time matters, we move fast. Most investigations begin within 24-48 hours, with emergency same-day deployment available.
+              </p>
+              <p className="text-sm text-neutral-500 font-light italic">
+                "Y'all don't play around. 3 days and we had everything for the lawyers."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-32 md:py-40 bg-[#FAFAF9]">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500 mb-24">Investigation Services</h2>
+          
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-2xl font-light text-neutral-900 mb-6 tracking-tight">
+                Evidence & Documentation
+              </h3>
+              <ul className="space-y-4 text-neutral-600 font-light">
+                <li>Witness Location & Interviews</li>
+                <li>Evidence Collection</li>
+                <li>Background Investigations</li>
+                <li>Expert Witness Testimony</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-light text-neutral-900 mb-6 tracking-tight">
+                Specialized Support
+              </h3>
+              <ul className="space-y-4 text-neutral-600 font-light">
+                <li>Surveillance Operations</li>
+                <li>Asset Searches</li>
+                <li>Scene Investigation</li>
+                <li>Case Documentation</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Practice Areas */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Practice Areas We Support
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-start space-x-3">
-              <div className="text-blue-600 text-2xl">✓</div>
-              <div>
-                <h3 className="font-semibold mb-1">Personal Injury</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Accident reconstruction and injury verification
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="text-blue-600 text-2xl">✓</div>
-              <div>
-                <h3 className="font-semibold mb-1">Family Law</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Custody investigations and asset discovery
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="text-blue-600 text-2xl">✓</div>
-              <div>
-                <h3 className="font-semibold mb-1">Criminal Defense</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Witness location and evidence verification
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="text-blue-600 text-2xl">✓</div>
-              <div>
-                <h3 className="font-semibold mb-1">Civil Litigation</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Document retrieval and fact verification
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="text-blue-600 text-2xl">✓</div>
-              <div>
-                <h3 className="font-semibold mb-1">Workers&apos; Compensation</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Surveillance and fraud investigation
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="text-blue-600 text-2xl">✓</div>
-              <div>
-                <h3 className="font-semibold mb-1">Insurance Defense</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Claims investigation and verification
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Work With Us */}
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Why Attorneys Choose MonacoPI
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4">⚖️</div>
-              <h3 className="text-xl font-semibold mb-3">Court-Ready Reports</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Detailed, professional reports that meet legal standards and are
-                admissible in court proceedings.
+      <section className="py-32 md:py-40 bg-neutral-900">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500 mb-24">Practice Areas</h2>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            <div>
+              <h3 className="text-xl font-light text-white mb-4">Personal Injury</h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Accident reconstruction, injury verification, and claims investigation
               </p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold mb-3">Attorney-Client Privilege</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                We understand and respect attorney-client privilege and work
-                within your legal framework.
+            <div>
+              <h3 className="text-xl font-light text-white mb-4">Family Law</h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Custody investigations, asset discovery, and divorce support
               </p>
             </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-3">Responsive Service</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Quick turnaround times and 24/7 availability for urgent
-                investigative needs.
+            <div>
+              <h3 className="text-xl font-light text-white mb-4">Criminal Defense</h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Witness location, evidence verification, and case investigation
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-light text-white mb-4">Civil Litigation</h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Document retrieval, fact verification, and evidence collection
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-light text-white mb-4">Workers' Compensation</h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Surveillance, fraud investigation, and claims verification
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-light text-white mb-4">Insurance Defense</h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Claims investigation, verification, and fraud detection
               </p>
             </div>
           </div>
@@ -193,23 +162,22 @@ export default function ForAttorneysPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Strengthen Your Case Today
+      <section className="py-32 bg-white">
+        <div className="max-w-[800px] mx-auto px-6 lg:px-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-neutral-900 mb-8 tracking-tight">
+            Strengthen your case
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-            Contact us to discuss how our investigation services can support your legal practice
+          <p className="text-lg text-neutral-600 font-light mb-12 leading-relaxed">
+            Contact us to discuss how our elite investigation services can support your legal practice.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-block px-10 py-4 bg-neutral-900 text-white text-sm font-normal tracking-wide hover:bg-neutral-700 transition-all duration-300 rounded-sm"
           >
-            Schedule a Consultation
+            Schedule Your Consultation
           </Link>
         </div>
       </section>
     </div>
   );
 }
-

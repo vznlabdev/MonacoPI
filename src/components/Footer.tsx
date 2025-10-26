@@ -4,39 +4,48 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-neutral-900 border-t border-neutral-800 mt-auto">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">MonacoPI</h3>
-            <p className="text-gray-400 text-sm">
-              Professional investigation services tailored to your needs.
+            <Link href="/" className="inline-block mb-6">
+              <span className="text-2xl font-normal tracking-tight text-white">
+                Monaco
+              </span>
+            </Link>
+            <p className="text-neutral-400 text-sm font-light leading-relaxed">
+              Elite investigation services for discerning clients who demand excellence, discretion, and results.
             </p>
+            <div className="mt-8 pt-8 border-t border-neutral-800">
+              <p className="text-neutral-500 text-xs font-light">
+                Licensed • Bonded • Insured
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xs font-medium mb-8 text-neutral-500 tracking-wider uppercase">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Link href="/" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Link href="/services" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-blue-400 transition-colors">
-                  About Us
+                <Link href="/about" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
+                  About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-blue-400 transition-colors">
-                  Contact Us
+                <Link href="/blog" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
+                  Blog
                 </Link>
               </li>
             </ul>
@@ -44,26 +53,21 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">For Clients</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xs font-medium mb-8 text-neutral-500 tracking-wider uppercase">Services</h4>
+            <ul className="space-y-3">
               <li>
-                <Link href="/for-attorneys" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Link href="/for-attorneys" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
                   For Attorneys
                 </Link>
               </li>
               <li>
-                <Link href="/for-individuals" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Link href="/for-individuals" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
                   For Individuals
                 </Link>
               </li>
               <li>
-                <Link href="/for-corporations" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Link href="/for-corporations" className="text-neutral-400 hover:text-white transition-colors text-sm font-light">
                   For Corporations
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources" className="text-gray-400 hover:text-blue-400 transition-colors">
-                  Resources
                 </Link>
               </li>
             </ul>
@@ -71,17 +75,27 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Email: info@monacopi.com</li>
-              <li>Phone: (555) 123-4567</li>
+            <h4 className="text-xs font-medium mb-8 text-neutral-500 tracking-wider uppercase">Contact</h4>
+            <ul className="space-y-4 text-neutral-400 text-sm font-light">
+              <li>info@monacopi.com</li>
+              <li>(555) 123-4567</li>
               <li>Available 24/7</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} MonacoPI. All rights reserved.</p>
+        <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-neutral-600 text-xs font-light">
+            © {currentYear} Monaco PI. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <Link href="#" className="text-neutral-600 hover:text-neutral-400 text-xs font-light transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="#" className="text-neutral-600 hover:text-neutral-400 text-xs font-light transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

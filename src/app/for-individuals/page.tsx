@@ -2,190 +2,128 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Individuals - MonacoPI",
-  description: "Personal investigation services for individuals and families",
+  title: "For Individuals - Monaco PI",
+  description: "Professional investigation services with complete discretion for relationship concerns, missing persons, and personal security.",
 };
-
-const services = [
-  {
-    title: "Background Checks",
-    description: "Pre-employment screening, tenant verification, and personal background investigations.",
-    icon: "🔍",
-  },
-  {
-    title: "Infidelity Investigations",
-    description: "Discreet surveillance and evidence gathering for suspected infidelity cases.",
-    icon: "💔",
-  },
-  {
-    title: "Missing Persons",
-    description: "Locate missing family members, friends, or long-lost relatives.",
-    icon: "🔎",
-  },
-  {
-    title: "Child Custody Support",
-    description: "Documentation and evidence gathering for custody and visitation matters.",
-    icon: "👨‍👩‍👧",
-  },
-  {
-    title: "Personal Protection",
-    description: "Risk assessment and personal security consultations.",
-    icon: "🛡️",
-  },
-  {
-    title: "Online Dating Verification",
-    description: "Verify the identity and background of online acquaintances.",
-    icon: "💻",
-  },
-];
 
 export default function ForIndividualsPage() {
   return (
-    <div>
+    <div className="bg-[#FAFAF9]">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">For Individuals</h1>
-          <p className="text-xl text-blue-100">
-            Personal investigation services you can trust
+      <section className="min-h-[60vh] flex items-center justify-center bg-neutral-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900"></div>
+        
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10 text-center py-32">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight">
+            For Individuals
+          </h1>
+          <p className="text-xl text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed">
+            When your personal life demands professional answers
           </p>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            Life presents situations where you need answers, clarity, or protection. At MonacoPI,
-            we provide discreet, professional investigation services tailored to your personal needs.
-            Whether you&apos;re concerned about a relationship, need to locate someone, or require a
-            background check, we&apos;re here to help.
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
-            Our investigators handle each case with the utmost confidentiality and professionalism,
-            understanding the sensitive nature of personal investigations.
-          </p>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Our Services for Individuals
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg"
-              >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+      <section className="py-32 md:py-40">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl">
+            <p className="text-2xl md:text-3xl text-neutral-700 font-light leading-relaxed mb-12">
+              When your world feels uncertain and you need answers, you shouldn't have to navigate this alone.
+            </p>
+            <p className="text-xl text-neutral-600 font-light leading-relaxed">
+              Whether you're dealing with a relationship crisis, searching for someone important, or protecting what matters most to you, Monaco PI provides the professional expertise and compassionate support you need during life's most challenging moments.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Common Scenarios */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Common Situations We Help With
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-3">Relationship Concerns</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Suspicions of infidelity or dishonesty in relationships can be emotionally
-                challenging. We provide discreet surveillance and factual evidence to help
-                you make informed decisions.
+      {/* Situations We Handle */}
+      <section className="py-32 md:py-40 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500 mb-24">Situations We Handle</h2>
+          
+          <div className="grid md:grid-cols-2 gap-20">
+            <div>
+              <h3 className="text-3xl font-light text-neutral-900 mb-6 tracking-tight">
+                Relationship & Marriage Concerns
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed mb-6">
+                When trust has been broken and you need to know the truth. Our surveillance and investigation services provide the clarity you need to make informed decisions about your future.
+              </p>
+              <p className="text-sm text-neutral-500 font-light italic">
+                "Everyone kept saying I was being paranoid. Well guess what? I WASN'T."
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-3">Family Matters</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                From custody disputes to locating estranged family members, we handle
-                sensitive family investigations with care and professionalism.
+
+            <div>
+              <h3 className="text-3xl font-light text-neutral-900 mb-6 tracking-tight">
+                Missing Person Investigations
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed mb-6">
+                Reconnecting with lost family members, locating estranged relatives, or finding someone who's disappeared from your life. We use advanced databases and investigative techniques others can't access.
+              </p>
+              <p className="text-sm text-neutral-500 font-light italic">
+                "She's okay!! She's really okay. I can't stop crying. Thank you thank you thank you"
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-3">Pre-Employment Screening</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Hiring household help or childcare? Verify backgrounds, credentials, and
-                references to ensure your family&apos;s safety.
+
+            <div>
+              <h3 className="text-3xl font-light text-neutral-900 mb-6 tracking-tight">
+                Background Investigations
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed">
+                Before you make important personal decisions – whether it's a new relationship, business partnership, or childcare provider – know who you're really dealing with.
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-3">Online Safety</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Verify the identity of online contacts, investigate potential scams, or
-                check the background of someone you met online.
+
+            <div>
+              <h3 className="text-3xl font-light text-neutral-900 mb-6 tracking-tight">
+                Asset & Financial Investigations
+              </h3>
+              <p className="text-neutral-600 font-light leading-relaxed mb-6">
+                Uncovering hidden assets, suspicious financial activity, or protecting yourself from fraud. We follow the money trail that others miss.
+              </p>
+              <p className="text-sm text-neutral-500 font-light italic">
+                "Dude you found him in 2 days. TWO DAYS. I've been looking for months!"
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Confidentiality Guarantee */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-6xl mb-6">🔒</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Your Privacy is Our Priority
-          </h2>
-          <p className="text-xl text-blue-100 mb-4">
-            All investigations are conducted with complete discretion. Your personal information
-            and case details are strictly confidential and protected at all times.
-          </p>
-        </div>
-      </section>
+      {/* Why Professional Help */}
+      <section className="py-32 md:py-40 bg-neutral-900">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500 mb-24">Why Professional Help</h2>
+          
+          <div className="grid md:grid-cols-3 gap-16">
+            <div>
+              <h3 className="text-2xl font-light text-white mb-6 tracking-tight">
+                You Can't Afford Mistakes
+              </h3>
+              <p className="text-neutral-400 font-light leading-relaxed mb-6">
+                DIY investigations often backfire. Social media stalking, confronting people directly, or hiring inexperienced investigators can make your situation worse.
+              </p>
+              <p className="text-sm text-neutral-500 font-light italic">
+                "I thought I was going insane. Turns out my gut was right all along."
+              </p>
+            </div>
 
-      {/* How It Works */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            How It Works
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Reach out for a free, confidential consultation
+            <div>
+              <h3 className="text-2xl font-light text-white mb-6 tracking-tight">
+                Your Privacy Is Everything
+              </h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                We understand that discretion isn't just preferred – it's essential. Our investigations are conducted with complete confidentiality using unmarked vehicles and encrypted communications.
               </p>
             </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Share Details</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Tell us about your situation and what you need
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-semibold mb-2">We Investigate</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Our team conducts a thorough, discreet investigation
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Get Answers</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Receive a detailed report with our findings
+
+            <div>
+              <h3 className="text-2xl font-light text-white mb-6 tracking-tight">
+                Compassionate Support
+              </h3>
+              <p className="text-neutral-400 font-light leading-relaxed">
+                Our team combines professional expertise with genuine empathy. We listen to your concerns and provide the emotional support you need while delivering the facts you deserve.
               </p>
             </div>
           </div>
@@ -193,23 +131,22 @@ export default function ForIndividualsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Get the Answers You Need
+      <section className="py-32 bg-white">
+        <div className="max-w-[800px] mx-auto px-6 lg:px-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-neutral-900 mb-8 tracking-tight">
+            Get the answers you deserve
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-            Take the first step toward peace of mind with a confidential consultation
+          <p className="text-lg text-neutral-600 font-light mb-12 leading-relaxed">
+            Take the first step toward peace of mind with your free confidential consultation.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-block px-10 py-4 bg-neutral-900 text-white text-sm font-normal tracking-wide hover:bg-neutral-700 transition-all duration-300 rounded-sm"
           >
-            Request a Consultation
+            Request Your Free Consultation
           </Link>
         </div>
       </section>
     </div>
   );
 }
-
