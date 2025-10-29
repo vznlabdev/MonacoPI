@@ -37,12 +37,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-20">
             <div>
               <p className="text-xl md:text-2xl text-navy-light font-light leading-relaxed">
-                Monaco PI exists to deliver truth with integrity. We believe every client deserves answers—whether it's protecting your family, your business, or your assets.
+                Monaco PI exists to deliver truth with integrity. We believe every client deserves answers—whether it&apos;s protecting your family, your business, or your assets.
               </p>
             </div>
             <div>
               <p className="text-xl md:text-2xl text-navy-light font-light leading-relaxed">
-                We don't just gather information; we provide clarity, closure, and actionable intelligence when you need it most. Our team combines decades of experience to serve clients who understand that excellence isn't optional.
+                We don&apos;t just gather information; we provide clarity, closure, and actionable intelligence when you need it most. Our team combines decades of experience to serve clients who understand that excellence isn&apos;t optional.
               </p>
             </div>
           </div>
@@ -247,21 +247,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="bg-white p-10 rounded-sm border border-cream-dark hover:shadow-lg transition-shadow duration-300">
               <p className="text-navy-light font-light leading-relaxed mb-8 text-lg">
-                "I finally got some sleep last night. First time in weeks. Thank you so much."
+                &quot;I finally got some sleep last night. First time in weeks. Thank you so much.&quot;
               </p>
               <div className="text-xs text-navy-lighter/70 font-light tracking-wide">— Divorce Investigation Client</div>
             </div>
 
             <div className="bg-white p-10 rounded-sm border border-cream-dark hover:shadow-lg transition-shadow duration-300">
               <p className="text-navy-light font-light leading-relaxed mb-8 text-lg">
-                "Everyone kept saying I was being paranoid. Well guess what? I WASN'T."
+                &quot;Everyone kept saying I was being paranoid. Well guess what? I WASN&apos;T.&quot;
               </p>
               <div className="text-xs text-navy-lighter/70 font-light tracking-wide">— Custody Case Client</div>
             </div>
 
             <div className="bg-white p-10 rounded-sm border border-cream-dark hover:shadow-lg transition-shadow duration-300">
               <p className="text-navy-light font-light leading-relaxed mb-8 text-lg">
-                "That footage was perfect. He saw it and settled the same week. Done deal."
+                &quot;That footage was perfect. He saw it and settled the same week. Done deal.&quot;
               </p>
               <div className="text-xs text-navy-lighter/70 font-light tracking-wide">— Personal Injury Attorney</div>
             </div>
@@ -279,7 +279,7 @@ export default function Home() {
                 Partner with us
               </h2>
               <p className="text-lg text-navy-lighter font-light leading-relaxed">
-                If you're looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
+                If you&apos;re looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
               </p>
             </div>
             

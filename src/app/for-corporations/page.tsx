@@ -28,7 +28,7 @@ export default function ForCorporationsPage() {
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
             <p className="text-2xl md:text-3xl text-navy-light font-light leading-relaxed mb-12">
-              In today's complex business environment, protecting your company's assets, reputation, and intellectual property is critical.
+              In today&apos;s complex business environment, protecting your company&apos;s assets, reputation, and intellectual property is critical.
             </p>
             <p className="text-xl text-navy-lighter font-light leading-relaxed">
               Monaco PI provides specialized corporate investigation services designed to safeguard your organization from internal and external threats with complete discretion.

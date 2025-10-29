@@ -63,7 +63,7 @@ export default function BlogPage() {
             Blog
           </h1>
           <p className="text-xl text-cream/90 font-light max-w-2xl mx-auto leading-relaxed">
-            Expert insights and practical advice from Colorado's premier investigation firm
+            Expert insights and practical advice from Colorado&apos;s premier investigation firm
           </p>
         </div>
       </section>

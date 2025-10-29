@@ -28,7 +28,7 @@ export default function ForAttorneysPage() {
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
             <p className="text-2xl md:text-3xl text-navy-light font-light leading-relaxed mb-12">
-              When the stakes are high and failure isn't an option, you need more than basic investigation services.
+              When the stakes are high and failure isn&apos;t an option, you need more than basic investigation services.
             </p>
             <p className="text-xl text-navy-lighter font-light leading-relaxed">
               You need the elite expertise, absolute discretion, and proven results that discerning professionals trust. Our investigations deliver actionable intelligence that stands up in court.
@@ -49,10 +49,10 @@ export default function ForAttorneysPage() {
                 Case Resolution Rate
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed mb-6">
-                We maintain one of the industry's highest success rates because we only accept cases we're confident we can solve.
+                We maintain one of the industry&apos;s highest success rates because we only accept cases we&apos;re confident we can solve.
               </p>
               <p className="text-sm text-navy-lighter/70 font-light italic">
-                "Seriously, you're the only ones who actually found him. Everyone else just took my money."
+                &quot;Seriously, you&apos;re the only ones who actually found him. Everyone else just took my money.&quot;
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function ForAttorneysPage() {
                 Years Experience
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed">
-                Our team combines decades of experience from law enforcement, military intelligence, and legal system expertise. We don't just gather information – we deliver actionable intelligence that stands up in court.
+                Our team combines decades of experience from law enforcement, military intelligence, and legal system expertise. We don&apos;t just gather information – we deliver actionable intelligence that stands up in court.
               </p>
             </div>
 
@@ -75,7 +75,7 @@ export default function ForAttorneysPage() {
                 When time matters, we move fast. Most investigations begin within 24-48 hours, with emergency same-day deployment available.
               </p>
               <p className="text-sm text-navy-lighter/70 font-light italic">
-                "Y'all don't play around. 3 days and we had everything for the lawyers."
+                &quot;Y&apos;all don&apos;t play around. 3 days and we had everything for the lawyers.&quot;
               </p>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function ForAttorneysPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-light text-cream mb-4">Workers' Compensation</h3>
+              <h3 className="text-xl font-light text-cream mb-4">Workers&apos; Compensation</h3>
               <p className="text-cream/70 font-light leading-relaxed">
                 Surveillance, fraud investigation, and claims verification
               </p>

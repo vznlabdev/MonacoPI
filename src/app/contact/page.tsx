@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           {submitStatus === "success" && (
             <div className="mb-12 p-6 bg-green-50 border border-green-200 text-green-800 rounded-sm text-center font-light">
-              Thanks for reaching out! We'll get back to you as soon as possible.
+              Thanks for reaching out! We&apos;ll get back to you as soon as possible.
             </div>
           )}
 
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 Partner with us
               </h2>
               <p className="text-lg text-navy-lighter font-light leading-relaxed">
-                If you're looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
+                If you&apos;re looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
               </p>
             </div>
             

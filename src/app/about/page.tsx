@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-navy-lighter/70 mb-16">Mission</h2>
           <p className="text-2xl md:text-3xl text-navy-light font-light leading-relaxed max-w-4xl">
-            Monaco PI exists to deliver truth with integrity. We believe every client deserves answers whether it's protecting your family, your business, or your assets. We don't just gather information; we provide clarity, closure, and actionable intelligence when you need it most.
+            Monaco PI exists to deliver truth with integrity. We believe every client deserves answers whether it&apos;s protecting your family, your business, or your assets. We don&apos;t just gather information; we provide clarity, closure, and actionable intelligence when you need it most.
           </p>
         </div>
       </section>
@@ -40,12 +40,12 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-20">
             <div>
               <p className="text-xl text-navy-light font-light leading-relaxed">
-                Founded on the principle that high stakes situations demand elite expertise, Monaco PI has built a reputation as Colorado's premier private investigation firm.
+                Founded on the principle that high stakes situations demand elite expertise, Monaco PI has built a reputation as Colorado&apos;s premier private investigation firm.
               </p>
             </div>
             <div>
               <p className="text-xl text-navy-light font-light leading-relaxed">
-                Our team combines decades of experience from law enforcement, military intelligence to legal system expertise. We've built our practice around one simple truth: our clients deserve investigators who understand that precision, professionalism, and results aren't luxuries, they're requirements.
+                Our team combines decades of experience from law enforcement, military intelligence to legal system expertise. We&apos;ve built our practice around one simple truth: our clients deserve investigators who understand that precision, professionalism, and results aren&apos;t luxuries, they&apos;re requirements.
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
                 </h4>
                 <ul className="space-y-3 text-navy-lighter font-light">
                   <li>17+ years as a licensed private investigator</li>
-                  <li>Former investigator intern, Arapahoe County Public Defender's Office</li>
+                  <li>Former investigator intern, Arapahoe County Public Defender&apos;s Office</li>
                   <li>10 years as investigator with Ross Investigators, P.C.</li>
                   <li>Nearly 5 years at personal injury law firm</li>
                   <li>Legal research experience at lobbying firm</li>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 Discretion Above All
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed">
-                Your privacy isn't negotiable. Every case is handled with the utmost confidentiality. We've never had a confidentiality breach in our history.
+                Your privacy isn&apos;t negotiable. Every case is handled with the utmost confidentiality. We&apos;ve never had a confidentiality breach in our history.
               </p>
             </div>
 
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 Honest Communication
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed">
-                We tell you what we can realistically deliver, not what you want to hear. If we don't believe we can solve your case, we'll tell you upfront.
+                We tell you what we can realistically deliver, not what you want to hear. If we don&apos;t believe we can solve your case, we&apos;ll tell you upfront.
               </p>
             </div>
 
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 Relentless Pursuit
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed">
-                We don't quit until we've exhausted every legitimate avenue. Our 95%+ case resolution rate reflects our commitment to finding answers.
+                We don&apos;t quit until we&apos;ve exhausted every legitimate avenue. Our 95%+ case resolution rate reflects our commitment to finding answers.
               </p>
             </div>
 
@@ -166,7 +166,7 @@ export default function AboutPage() {
                 No Results, Reduced Fee
               </h3>
               <p className="text-cream/70 font-light leading-relaxed">
-                If we don't deliver actionable findings through no fault of circumstances beyond our control, we adjust billing accordingly.
+                If we don&apos;t deliver actionable findings through no fault of circumstances beyond our control, we adjust billing accordingly.
               </p>
             </div>
 
@@ -175,7 +175,7 @@ export default function AboutPage() {
                 Transparent Pricing
               </h3>
               <p className="text-cream/70 font-light leading-relaxed">
-                You'll receive a clear estimate upfront during your free consultation. No surprise charges, hidden fees, or unexpected costs.
+                You&apos;ll receive a clear estimate upfront during your free consultation. No surprise charges, hidden fees, or unexpected costs.
               </p>
             </div>
 
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 Confidentiality
               </h3>
               <p className="text-cream/70 font-light leading-relaxed">
-                Client information is protected under strict NDA. We've never had a breach in our history.
+                Client information is protected under strict NDA. We&apos;ve never had a breach in our history.
               </p>
             </div>
           </div>
