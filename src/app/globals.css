@@ -5,24 +5,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Woodland-Inspired Neutral Palette */
-  --background-primary: #FAFAF9;
+  /* Navy and Cream Palette */
+  --navy: #070d3f;
+  --cream: #fef3e9;
+  --navy-light: #0f1a5f;
+  --navy-lighter: #1a2780;
+  --cream-dark: #f5e6d0;
+  
+  --background-primary: #fef3e9;
   --background-secondary: #FFFFFF;
-  --background-dark: #1A1A1A;
+  --background-dark: #070d3f;
   
-  --text-primary: #171717;
-  --text-secondary: #525252;
-  --text-tertiary: #A3A3A3;
-  --text-light: #F5F5F5;
+  --text-primary: #070d3f;
+  --text-secondary: #0f1a5f;
+  --text-tertiary: #5a6099;
+  --text-light: #fef3e9;
   
-  --accent-primary: #525252;
-  --accent-secondary: #737373;
+  --accent-primary: #070d3f;
+  --accent-secondary: #0f1a5f;
   
-  --border-light: #E5E5E5;
-  --border-dark: #404040;
+  --border-light: #f5e6d0;
+  --border-dark: #0f1a5f;
   
-  --background: #FAFAF9;
-  --foreground: #171717;
+  --background: #fef3e9;
+  --foreground: #070d3f;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,6 +1,44 @@
-# MonacoPI
+# Monaco PI - Private Investigation Services Website
 
-A Next.js project with Tailwind CSS, optimized for Vercel deployment.
+A professional, modern website for Monaco PI, an elite private investigation firm. Built with Next.js 14, TypeScript, and Tailwind CSS, featuring a sophisticated navy and cream color scheme.
+
+## Features
+
+- 🎨 **Modern Design** - Clean, professional aesthetic with smooth animations
+- 📱 **Fully Responsive** - Optimized for all devices from mobile to 4K displays
+- 🎯 **SEO Optimized** - Meta tags and semantic HTML for better search rankings
+- ⚡ **Fast Performance** - Built with Next.js 14 App Router and optimized images
+- 🎨 **Custom Color Scheme** - Sophisticated navy (#070d3f) and cream (#fef3e9) palette
+- 📐 **Max-width Layout** - Content containers capped at 1920px for optimal reading
+- ♿ **Accessible** - WCAG compliant with proper semantic markup
+- 🔍 **Service Focused** - Dedicated pages for attorneys, individuals, and corporations
+
+## Design System
+
+### Color Palette
+
+```css
+Navy (Primary):
+  - Default:  #070d3f
+  - Light:    #0f1a5f  (hover states)
+  - Lighter:  #1a2780  (text/accents)
+
+Cream (Secondary):
+  - Default:  #fef3e9
+  - Dark:     #f5e6d0  (borders/subtle backgrounds)
+```
+
+### Typography
+
+- **Headings**: Crimson Pro (Light, serif)
+- **Body**: Inter (Regular, sans-serif)
+- **Letter Spacing**: Tight for headings, minimal for body text
+
+### Layout
+
+- **Max Width**: 1920px for all content containers
+- **Padding**: 1.5rem (mobile) to 3rem (desktop)
+- **Grid System**: Responsive CSS Grid and Flexbox
 
 ## Getting Started
 
@@ -79,23 +117,162 @@ npm run type-check  # Run TypeScript type checking
 ```
 MonacoPI/
 ├── src/
-│   └── app/
-│       ├── layout.tsx      # Root layout
-│       ├── page.tsx        # Home page
-│       └── globals.css     # Global styles with Tailwind
-├── public/                 # Static assets
-├── .env.example            # Environment variables template
-├── .nvmrc                  # Node version specification
-├── vercel.json             # Vercel deployment config
-├── next.config.js          # Next.js configuration
-├── tailwind.config.ts      # Tailwind CSS configuration
-└── tsconfig.json           # TypeScript configuration
+│   ├── app/
+│   │   ├── about/
+│   │   │   └── page.tsx           # About page
+│   │   ├── blog/
+│   │   │   └── page.tsx           # Blog listing page
+│   │   ├── contact/
+│   │   │   └── page.tsx           # Contact form page
+│   │   ├── for-attorneys/
+│   │   │   └── page.tsx           # Attorney services page
+│   │   ├── for-corporations/
+│   │   │   └── page.tsx           # Corporate services page
+│   │   ├── for-individuals/
+│   │   │   └── page.tsx           # Individual services page
+│   │   ├── services/
+│   │   │   └── page.tsx           # All services page
+│   │   ├── globals.css            # Global styles + Tailwind
+│   │   ├── layout.tsx             # Root layout with nav/footer
+│   │   └── page.tsx               # Homepage
+│   └── components/
+│       ├── Footer.tsx             # Site footer
+│       └── Navigation.tsx         # Main navigation
+├── public/
+│   └── images/
+│       └── hero-image.jpg         # Hero section image
+├── .nvmrc                         # Node version (18.17.0)
+├── DEPLOYMENT.md                  # Deployment documentation
+├── VERCEL_REQUIREMENTS.md         # Vercel setup guide
+├── vercel.json                    # Vercel config
+├── next.config.js                 # Next.js config (standalone mode)
+├── tailwind.config.ts             # Tailwind + custom colors
+└── tsconfig.json                  # TypeScript config
 ```
+
+## Pages
+
+### Public Pages
+- **/** - Homepage with hero, services overview, results, and contact form
+- **/about** - Company mission, story, leadership, and core values
+- **/services** - Comprehensive list of investigation services
+- **/blog** - Blog articles and industry insights
+- **/contact** - Contact form and office information
+
+### Service Pages
+- **/for-attorneys** - Legal support and evidence collection services
+- **/for-individuals** - Personal investigation services
+- **/for-corporations** - Corporate intelligence and fraud investigation
+
+## Development Tips
+
+### Working with Colors
+
+The project uses custom Tailwind color utilities. You can use them anywhere:
+
+```tsx
+// Navy colors
+className="bg-navy text-navy-light border-navy-lighter"
+
+// Cream colors
+className="bg-cream text-cream-dark border-cream-dark"
+
+// With opacity
+className="bg-navy/80 text-cream/70"
+```
+
+### Component Structure
+
+All pages follow a consistent pattern:
+1. Hero section with navy background
+2. Content sections alternating between cream and white backgrounds
+3. CTA sections with appropriate contrast
+4. Footer navigation
+
+### Adding New Pages
+
+1. Create a new folder in `src/app/[page-name]/`
+2. Add `page.tsx` with your content
+3. Update `src/components/Navigation.tsx` if adding to main nav
+4. Add metadata for SEO
+5. Follow the existing color scheme and layout patterns
+
+### Custom Fonts
+
+The project uses Google Fonts:
+- **Crimson Pro** for elegant headings
+- **Inter** for clean, readable body text
+
+These are imported in `src/app/globals.css`.
+
+## Customization
+
+### Changing Colors
+
+Edit `tailwind.config.ts` to update the color scheme:
+
+```typescript
+navy: {
+  DEFAULT: '#070d3f',  // Your primary dark color
+  light: '#0f1a5f',
+  lighter: '#1a2780',
+},
+cream: {
+  DEFAULT: '#fef3e9',  // Your primary light color
+  dark: '#f5e6d0',
+},
+```
+
+### Adjusting Max Width
+
+The max-width is set to 1920px. To change it globally:
+
+```tsx
+// In any page component
+<div className="max-w-[YOUR_WIDTH_HERE] mx-auto px-6 lg:px-12">
+```
+
+## Performance Optimization
+
+This project includes several performance optimizations:
+
+- ✅ **Standalone Output** - Reduced deployment size
+- ✅ **SWC Minification** - Faster builds and smaller bundles
+- ✅ **Font Optimization** - Google Fonts preloaded and optimized
+- ✅ **Image Optimization** - Next.js automatic image optimization
+- ✅ **Static Generation** - Pages pre-rendered at build time
+- ✅ **Code Splitting** - Automatic route-based code splitting
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Learn More
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Deploy Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs)
+### Documentation
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Utility-first CSS framework
+- [Vercel Documentation](https://vercel.com/docs) - Deployment platform documentation
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/) - TypeScript handbook
+
+### Deployment Guides
+- [Deploy Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs) - Official Vercel + Next.js guide
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Project-specific deployment instructions
+- [VERCEL_REQUIREMENTS.md](./VERCEL_REQUIREMENTS.md) - Vercel configuration details
+
+## License
+
+This project is proprietary and confidential. All rights reserved.
+
+## Support
+
+For questions or issues, please contact the development team.
+
+---
+
+**Monaco PI** - Elite investigation services for discerning clients who demand excellence, discretion, and proven results.
 
