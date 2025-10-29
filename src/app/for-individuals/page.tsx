@@ -11,7 +11,7 @@ export default function ForIndividualsPage() {
     <div className="bg-cream">
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
         
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 relative z-10 text-center py-32">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-6 tracking-tight">
@@ -94,7 +94,7 @@ export default function ForIndividualsPage() {
       {/* Why Professional Help */}
       <section className="py-32 md:py-40 bg-navy">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-navy-lighter/70 mb-24">Why Professional Help</h2>
+          <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-cream/60 mb-24">Why Professional Help</h2>
           
           <div className="grid md:grid-cols-3 gap-16">
             <div>

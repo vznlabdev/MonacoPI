@@ -56,7 +56,7 @@ export default function BlogPage() {
     <div className="bg-cream">
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
         
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 relative z-10 text-center py-32">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-6 tracking-tight">

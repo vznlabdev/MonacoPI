@@ -1,34 +1,33 @@
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <div className="bg-cream">
+      {/* Unicorn Studio Script */}
+      <Script
+        id="unicorn-studio-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+          `,
+        }}
+      />
+
       {/* Hero Section */}
       <section className="min-h-[85vh] flex items-center justify-center bg-navy relative overflow-hidden">
-        {/* Hero Image */}
-        <img 
-          src="/images/hero.jpg" 
-          alt="" 
-          className="absolute inset-0 w-full h-full object-cover"
+        {/* Unicorn Studio Background */}
+        <div 
+          data-us-project="vQCSPWM9d7FriMggwacg"
+          data-us-scale="1"
+          data-us-dpi="1.5"
+          data-us-lazyload="false"
+          data-us-alttext="Monaco PI Interactive Background"
+          data-us-arialabel="Interactive 3D background animation"
+          className="absolute inset-0 w-full h-full"
+          style={{ width: '100%', height: '100%' }}
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/80 via-navy/70 to-navy/80"></div>
-        
-        <div className="max-w-[1920px] mx-auto px-6 lg:px-12 relative z-10 text-center py-32">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-cream mb-8 tracking-tight leading-[1.05]">
-            Monaco
-          </h1>
-          <p className="text-xl md:text-2xl text-cream/90 font-light max-w-2xl mx-auto leading-relaxed">
-            Elite investigation services for discerning clients who demand excellence, discretion, and proven results.
-          </p>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-cream/60 animate-bounce">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
       </section>
 
       {/* About Section */}
