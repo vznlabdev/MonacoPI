@@ -272,44 +272,52 @@ export default function Home() {
       {/* Partner With Us */}
       <section className="py-32 md:py-40 bg-white">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 text-center tracking-tight">
-            Partner with us
-          </h2>
-          <p className="text-lg text-navy-lighter font-light text-center mb-16 max-w-2xl mx-auto leading-relaxed">
-            If you're looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
-          </p>
-          
-          <form className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            {/* Left Column - Text */}
             <div>
-              <input
-                type="text"
-                placeholder="Your full name"
-                className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-              />
+              <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
+                Partner with us
+              </h2>
+              <p className="text-lg text-navy-lighter font-light leading-relaxed">
+                If you're looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
+              </p>
             </div>
+            
+            {/* Right Column - Form */}
             <div>
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-              />
+              <form className="space-y-6">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your full name"
+                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    rows={6}
+                    placeholder="A little bit about your situation"
+                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light resize-none"
+                  ></textarea>
+                </div>
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    className="w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
             </div>
-            <div>
-              <textarea
-                rows={6}
-                placeholder="A little bit about your situation"
-                className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light resize-none"
-              ></textarea>
-            </div>
-            <div className="text-center pt-4">
-              <button
-                type="submit"
-                className="px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </section>
     </div>

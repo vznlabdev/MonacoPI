@@ -57,63 +57,71 @@ export default function ContactPage() {
       {/* Contact Form */}
       <section className="py-32 md:py-40">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 text-center tracking-tight">
-            Partner with us
-          </h2>
-          <p className="text-lg text-navy-lighter font-light text-center mb-16 max-w-2xl mx-auto leading-relaxed">
-            If you're looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
-          </p>
-          
           {submitStatus === "success" && (
-            <div className="mb-8 p-6 bg-green-50 border border-green-200 text-green-800 rounded-sm text-center font-light">
+            <div className="mb-12 p-6 bg-green-50 border border-green-200 text-green-800 rounded-sm text-center font-light">
               Thanks for reaching out! We'll get back to you as soon as possible.
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            {/* Left Column - Text */}
             <div>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your full name"
-                required
-                className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-              />
+              <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
+                Partner with us
+              </h2>
+              <p className="text-lg text-navy-lighter font-light leading-relaxed">
+                If you're looking for professional investigation services, share a few details so we can discuss how to bring clarity to your situation.
+              </p>
             </div>
+            
+            {/* Right Column - Form */}
             <div>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Your email address"
-                required
-                className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-              />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your full name"
+                    required
+                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Your email address"
+                    required
+                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={6}
+                    placeholder="A little bit about your situation"
+                    required
+                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light resize-none"
+                  ></textarea>
+                </div>
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </button>
+                </div>
+              </form>
             </div>
-            <div>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={6}
-                placeholder="A little bit about your situation"
-                required
-                className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light resize-none"
-              ></textarea>
-            </div>
-            <div className="text-center pt-4">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </section>
 
