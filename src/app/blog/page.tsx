@@ -76,7 +76,7 @@ const blogPosts = [
     category: "Background Checks",
     date: "September 15, 2024",
     readTime: "5 min read",
-    image: "/images/Background-Checks-austin-distel-tLZhAKh0A-unsplash.jpg",
+    image: "/images/Background-Checks-austin-distel-tLZhFRLj6nY-unsplash.jpg",
   },
 ];
 
