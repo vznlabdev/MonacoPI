@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Investigation Insights & Expert Advice | Monaco PI Blog",
@@ -35,6 +36,7 @@ const blogPosts = [
     category: "Investigation Tips",
     date: "October 15, 2024",
     readTime: "5 min read",
+    image: "/images/5-Signs-You-May-Need-a-Private-Investigator-khiet-tam-5rFbAKh0A-A-unsplash.jpg",
   },
   {
     title: "How to Choose the Right Private Investigator",
@@ -42,6 +44,7 @@ const blogPosts = [
     category: "Hiring Guide",
     date: "October 10, 2024",
     readTime: "7 min read",
+    image: "/images/How-to-Choose-the-Right-Private-Investigator-marten-newhall-uAFjFsMS3YY-unsplash.jpg",
   },
   {
     title: "What Makes Evidence Court-Admissible?",
@@ -49,6 +52,7 @@ const blogPosts = [
     category: "Legal Insights",
     date: "October 5, 2024",
     readTime: "6 min read",
+    image: "/images/What-Makes-Evidence-Court-Admissible-thom-masat-RLW1pzEXvEo-unsplash.jpg",
   },
   {
     title: "Divorce Investigation: What You Need to Know",
@@ -56,6 +60,7 @@ const blogPosts = [
     category: "Family Law",
     date: "September 28, 2024",
     readTime: "8 min read",
+    image: "/images/Divorce-Investigation-engin-akyurt-Jw5Kth70hQo-unsplash.jpg",
   },
   {
     title: "The Truth About Surveillance Operations",
@@ -63,6 +68,7 @@ const blogPosts = [
     category: "Investigation Methods",
     date: "September 20, 2024",
     readTime: "6 min read",
+    image: "/images/The-Truth-bout-Surveillance-Operations-lianhao-qu-LfaN1gswV5c-unsplash.jpg",
   },
   {
     title: "Background Checks: What They Reveal",
@@ -70,6 +76,7 @@ const blogPosts = [
     category: "Background Checks",
     date: "September 15, 2024",
     readTime: "5 min read",
+    image: "/images/Background-Checks-austin-distel-tLZhAKh0A-unsplash.jpg",
   },
 ];
 
@@ -99,8 +106,15 @@ export default function BlogPage() {
                 key={index}
                 className="group cursor-pointer"
               >
-                <div className="aspect-[4/3] bg-cream-dark mb-8 rounded-sm overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/20 to-neutral-900/40 group-hover:opacity-70 transition-opacity duration-500"></div>
+                <div className="aspect-[4/3] mb-8 rounded-sm overflow-hidden relative">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                   <div className="absolute top-6 right-6">
                     <span className="bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-medium text-navy rounded-sm">
                       {post.category}

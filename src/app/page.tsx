@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 
 // Declare UnicornStudio type for window object
@@ -170,8 +171,15 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Case 1 */}
             <div className="group cursor-pointer">
-              <div className="aspect-[3/4] bg-cream-dark mb-8 rounded-sm overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/20 to-neutral-900/40 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
+                <Image
+                  src="/images/hidden-asset-sofya-kholodkova-HSlDZ7suCQQ-unsplash.jpg"
+                  alt="Hidden Asset Recovery Investigation"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
                 </div>
@@ -191,8 +199,15 @@ export default function Home() {
 
             {/* Case 2 */}
             <div className="group cursor-pointer">
-              <div className="aspect-[3/4] bg-cream-dark mb-8 rounded-sm overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/20 to-neutral-900/40 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
+                <Image
+                  src="/images/corporate-fraud-kevin-matos-Nl_FMFpXo2g-unsplash.jpg"
+                  alt="Corporate Fraud Investigation"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
                 </div>
@@ -212,8 +227,15 @@ export default function Home() {
 
             {/* Case 3 */}
             <div className="group cursor-pointer">
-              <div className="aspect-[3/4] bg-cream-dark mb-8 rounded-sm overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/20 to-neutral-900/40 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
+                <Image
+                  src="/images/custody-investigation-daiga-ellaby-JZ51o_-UOY8-unsplash.jpg"
+                  alt="Custody Investigation Case"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
                 </div>
