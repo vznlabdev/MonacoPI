@@ -1,20 +1,40 @@
+"use client";
+
 import Link from "next/link";
-import Script from "next/script";
+import { useEffect } from "react";
+
+// Declare UnicornStudio type for window object
+declare global {
+  interface Window {
+    UnicornStudio?: {
+      init: () => void;
+    };
+  }
+}
 
 export default function Home() {
+  useEffect(() => {
+    // Load Unicorn Studio script if not already loaded
+    if (!document.querySelector('script[src*="unicornStudio.umd.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js";
+      script.async = true;
+      script.onload = () => {
+        if (window.UnicornStudio) {
+          window.UnicornStudio.init();
+        }
+      };
+      document.body.appendChild(script);
+    } else {
+      // Script already loaded, just reinitialize
+      if (window.UnicornStudio) {
+        window.UnicornStudio.init();
+      }
+    }
+  }, []);
+
   return (
     <div className="bg-cream">
-      {/* Unicorn Studio Script */}
-      <Script
-        id="unicorn-studio-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
-          `,
-        }}
-      />
-
       {/* Hero Section */}
       <section className="min-h-[85vh] flex items-center justify-center bg-navy relative overflow-hidden">
         {/* Unicorn Studio Background */}
