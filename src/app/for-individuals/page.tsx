@@ -2,8 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Individuals - Monaco PI",
-  description: "Professional investigation services with complete discretion for relationship concerns, missing persons, and personal security.",
+  title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
+  description: "Compassionate, discreet investigation services for personal matters. Relationship concerns, missing person searches, background checks, and asset investigations. Get the answers you deserve.",
+  openGraph: {
+    title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
+    description: "Compassionate, discreet investigation services for personal matters. Relationship concerns, missing person searches, and background investigations.",
+    url: "https://monacopi.com/for-individuals",
+    siteName: "Monaco PI",
+    images: [
+      {
+        url: "/images/opengraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monaco PI - Private Investigation for Individuals",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
+    description: "Compassionate, discreet investigation services for personal matters. Get the answers you deserve.",
+    images: ["/images/opengraph.jpg"],
+  },
 };
 
 export default function ForIndividualsPage() {

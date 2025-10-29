@@ -2,8 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About - Monaco PI",
-  description: "Learn about Monaco PI's founder Crystal Monaco, our elite investigation team, and our commitment to delivering truth with integrity.",
+  title: "About Monaco PI | Elite Private Investigation Services",
+  description: "Founded by Crystal Monaco with 17+ years of experience. Elite investigation services built on integrity, discretion, and a 95%+ case resolution rate. Licensed in Colorado, Florida, and Texas.",
+  openGraph: {
+    title: "About Monaco PI | Elite Private Investigation Services",
+    description: "Founded by Crystal Monaco with 17+ years of experience. Elite investigation services built on integrity, discretion, and a 95%+ case resolution rate.",
+    url: "https://monacopi.com/about",
+    siteName: "Monaco PI",
+    images: [
+      {
+        url: "/images/opengraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monaco PI - Elite Private Investigation",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Monaco PI | Elite Private Investigation Services",
+    description: "Founded by Crystal Monaco with 17+ years of experience. Elite investigation services built on integrity, discretion, and a 95%+ case resolution rate.",
+    images: ["/images/opengraph.jpg"],
+  },
 };
 
 export default function AboutPage() {

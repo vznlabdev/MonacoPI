@@ -2,8 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blog - Monaco PI",
-  description: "Expert insights on private investigation, security tips, and industry knowledge from Monaco PI's experienced investigators.",
+  title: "Investigation Insights & Expert Advice | Monaco PI Blog",
+  description: "Expert insights on private investigation, security tips, legal guidance, and industry knowledge from Colorado&apos;s premier investigation firm. Learn from experienced investigators.",
+  openGraph: {
+    title: "Investigation Insights & Expert Advice | Monaco PI Blog",
+    description: "Expert insights on private investigation, security tips, legal guidance, and industry knowledge from Colorado&apos;s premier investigation firm.",
+    url: "https://monacopi.com/blog",
+    siteName: "Monaco PI",
+    images: [
+      {
+        url: "/images/opengraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monaco PI Blog - Investigation Insights",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Investigation Insights & Expert Advice | Monaco PI Blog",
+    description: "Expert insights on private investigation, security tips, and industry knowledge from experienced investigators.",
+    images: ["/images/opengraph.jpg"],
+  },
 };
 
 const blogPosts = [

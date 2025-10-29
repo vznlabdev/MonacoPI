@@ -2,8 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Corporations - Monaco PI",
-  description: "Corporate investigation services for businesses and organizations. Fraud detection, due diligence, and risk assessment.",
+  title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
+  description: "Protect your business with professional corporate investigations. Fraud detection, due diligence, workplace investigations, IP protection, and employee screening. Complete confidentiality guaranteed.",
+  openGraph: {
+    title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
+    description: "Protect your business with professional corporate investigations. Fraud detection, due diligence, workplace investigations, and IP protection.",
+    url: "https://monacopi.com/for-corporations",
+    siteName: "Monaco PI",
+    images: [
+      {
+        url: "/images/opengraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monaco PI - Corporate Investigation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
+    description: "Protect your business with professional corporate investigations. Fraud detection, due diligence, and workplace investigations.",
+    images: ["/images/opengraph.jpg"],
+  },
 };
 
 export default function ForCorporationsPage() {

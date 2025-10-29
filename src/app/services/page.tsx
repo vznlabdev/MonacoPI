@@ -2,8 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services - Monaco PI",
-  description: "Professional investigation services including surveillance, background checks, divorce investigations, and more. Licensed investigators with court-ready evidence.",
+  title: "Investigation Services | Field Surveillance, Background Checks & More",
+  description: "Expert private investigation services: field surveillance, background investigations, scene investigation, insurance defense, process serving, and expert witness testimony. Court-ready evidence you can trust.",
+  openGraph: {
+    title: "Investigation Services | Monaco PI",
+    description: "Expert private investigation services: field surveillance, background investigations, scene investigation, insurance defense, process serving, and expert witness testimony.",
+    url: "https://monacopi.com/services",
+    siteName: "Monaco PI",
+    images: [
+      {
+        url: "/images/opengraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monaco PI Investigation Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Investigation Services | Monaco PI",
+    description: "Expert private investigation services: field surveillance, background investigations, scene investigation, insurance defense, and more.",
+    images: ["/images/opengraph.jpg"],
+  },
 };
 
 export default function ServicesPage() {

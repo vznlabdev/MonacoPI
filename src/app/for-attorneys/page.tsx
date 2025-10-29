@@ -2,8 +2,30 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Attorneys - Monaco PI",
-  description: "Bulletproof evidence and court-ready reports for legal professionals. Expert witness testimony and rapid deployment.",
+  title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
+  description: "Bulletproof evidence for legal professionals. 95%+ case resolution rate, 24-48h deployment, expert witness testimony. Specialized in personal injury, family law, criminal defense, and civil litigation.",
+  openGraph: {
+    title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
+    description: "Bulletproof evidence for legal professionals. 95%+ case resolution rate, 24-48h deployment, expert witness testimony for all practice areas.",
+    url: "https://monacopi.com/for-attorneys",
+    siteName: "Monaco PI",
+    images: [
+      {
+        url: "/images/opengraph.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monaco PI - Investigation Services for Attorneys",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
+    description: "Bulletproof evidence for legal professionals. 95%+ case resolution rate, 24-48h deployment, expert witness testimony.",
+    images: ["/images/opengraph.jpg"],
+  },
 };
 
 export default function ForAttorneysPage() {
