@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
+import Script from "next/script";
+import { useState } from "react";
 import { caseStudies } from "@/data/caseStudies";
 
 // Declare UnicornStudio type for window object
@@ -15,28 +16,21 @@ declare global {
 }
 
 export default function Home() {
-  useEffect(() => {
-    // Load Unicorn Studio script if not already loaded
-    if (!document.querySelector('script[src*="unicornStudio.umd.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js";
-      script.async = true;
-      script.onload = () => {
-        if (window.UnicornStudio) {
-          window.UnicornStudio.init();
-        }
-      };
-      document.body.appendChild(script);
-    } else {
-      // Script already loaded, just reinitialize
-      if (window.UnicornStudio) {
-        window.UnicornStudio.init();
-      }
-    }
-  }, []);
+  const [unicornLoaded, setUnicornLoaded] = useState(false);
 
   return (
     <div className="bg-cream">
+      <Script
+        src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          if (window.UnicornStudio) {
+            window.UnicornStudio.init();
+            setUnicornLoaded(true);
+          }
+        }}
+      />
+      
       {/* Hero Section */}
       <section className="min-h-[85vh] flex items-center justify-center bg-navy relative overflow-hidden">
         {/* Unicorn Studio Background */}
@@ -183,6 +177,7 @@ export default function Home() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                    priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -277,37 +272,19 @@ export default function Home() {
             
             {/* Right Column - Form */}
             <div>
-              <form className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your full name"
-                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    rows={6}
-                    placeholder="A little bit about your situation"
-                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light resize-none"
-                  ></textarea>
-                </div>
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    className="w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              <p className="text-navy-lighter font-light mb-6">
+                For immediate assistance, please visit our{" "}
+                <Link href="/contact" className="text-navy hover:text-navy-light underline">
+                  contact page
+                </Link>
+                {" "}to reach out directly.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm text-center"
+              >
+                Get Started
+              </Link>
             </div>
           </div>
         </div>

@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Crimson_Pro } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const crimsonPro = Crimson_Pro({ 
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-crimson-pro',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monacopi.com"),
@@ -40,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+    <html lang="en" className={`${inter.variable} ${crimsonPro.variable}`}>
+      <body className="flex flex-col min-h-screen">
         <Navigation />
         <main className="flex-grow">{children}</main>
         <Footer />

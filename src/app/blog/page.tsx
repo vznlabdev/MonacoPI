@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/data/blogPosts";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Investigation Insights & Expert Advice | Monaco PI Blog",
@@ -65,6 +66,7 @@ export default function BlogPage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={index < 3}
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                     <div className="absolute top-6 right-6">
@@ -94,29 +96,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-32 bg-navy">
-        <div className="max-w-[1920px] mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-cream mb-8 tracking-tight">
-            Stay informed
-          </h2>
-          <p className="text-lg text-cream/70 font-light mb-12 leading-relaxed">
-            Get expert investigation insights delivered to your inbox
-          </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-6 py-4 bg-navy-light border border-navy-light text-cream placeholder-neutral-500 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-            />
-            <button className="px-8 py-4 bg-white text-navy text-sm font-normal hover:bg-cream-dark transition-all rounded-sm">
-              Subscribe
-            </button>
-          </form>
-          <p className="text-xs text-navy-lighter mt-6 font-light">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-      </section>
+      <NewsletterForm />
     </div>
   );
 }

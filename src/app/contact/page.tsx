@@ -23,19 +23,38 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus(null), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus("error");
       setTimeout(() => setSubmitStatus(null), 5000);
-    }, 1000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -60,6 +79,12 @@ export default function ContactPage() {
           {submitStatus === "success" && (
             <div className="mb-12 p-6 bg-green-50 border border-green-200 text-green-800 rounded-sm text-center font-light">
               Thanks for reaching out! We&apos;ll get back to you as soon as possible.
+            </div>
+          )}
+          
+          {submitStatus === "error" && (
+            <div className="mb-12 p-6 bg-red-50 border border-red-200 text-red-800 rounded-sm text-center font-light">
+              Sorry, something went wrong. Please try again or contact us directly.
             </div>
           )}
 
