@@ -84,7 +84,7 @@ export default function ForAttorneysPage() {
                 Years Experience
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed">
-                Our team combines decades of experience from law enforcement, military intelligence, and legal system expertise. We don&apos;t just gather information – we deliver actionable intelligence that stands up in court.
+                Our team combines decades of experience from law enforcement, military intelligence, and legal system expertise. We don&apos;t just gather information; we deliver actionable intelligence that stands up in court.
               </p>
             </div>
 

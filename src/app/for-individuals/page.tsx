@@ -94,7 +94,7 @@ export default function ForIndividualsPage() {
                 Background Investigations
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed">
-                Before you make important personal decisions – whether it&apos;s a new relationship, business partnership, or childcare provider – know who you&apos;re really dealing with.
+                Before you make important personal decisions about a new relationship, business partnership, or childcare provider, know who you&apos;re really dealing with.
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export default function ForIndividualsPage() {
                 Your Privacy Is Everything
               </h3>
               <p className="text-cream/70 font-light leading-relaxed">
-                We understand that discretion isn&apos;t just preferred – it&apos;s essential. Our investigations are conducted with complete confidentiality using unmarked vehicles and encrypted communications.
+                We understand that discretion isn&apos;t just preferred, it&apos;s essential. Our investigations are conducted with complete confidentiality using unmarked vehicles and encrypted communications.
               </p>
             </div>
 

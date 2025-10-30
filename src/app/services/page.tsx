@@ -109,7 +109,8 @@ export default function ServicesPage() {
                   Bulletproof evidence that insurance companies and opposing counsel can&apos;t dispute. Our footage speaks for itself.
                 </p>
                 <p className="text-sm text-navy-lighter/70 font-light italic">
-                  &quot;Sent them your video and they dropped it immediately. Didn&apos;t even argue lol&quot; - Workers&apos; Comp Defense
+                  &quot;Sent them your video and they dropped it immediately. Didn&apos;t even argue lol.&quot;<br />
+                  <span className="text-xs">Workers&apos; Comp Defense</span>
                 </p>
               </div>
             </div>
@@ -124,7 +125,7 @@ export default function ServicesPage() {
                   Process Serving
                 </h3>
                 <p className="text-lg text-navy-lighter font-light leading-relaxed max-w-2xl">
-                  Efficient, professional service with same-day and emergency options available. We find them and serve them – guaranteed.
+                  Efficient, professional service with same-day and emergency options available. We find them and serve them, guaranteed.
                 </p>
               </div>
             </div>

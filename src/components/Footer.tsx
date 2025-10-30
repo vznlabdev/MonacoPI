@@ -88,10 +88,10 @@ export default function Footer() {
             © {currentYear} Monaco PI. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-cream/50 hover:text-cream/70 text-xs font-light transition-colors">
+            <Link href="/privacy" className="text-cream/50 hover:text-cream/70 text-xs font-light transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-cream/50 hover:text-cream/70 text-xs font-light transition-colors">
+            <Link href="/terms" className="text-cream/50 hover:text-cream/70 text-xs font-light transition-colors">
               Terms of Service
             </Link>
           </div>

@@ -65,7 +65,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-20">
             <div>
               <p className="text-xl md:text-2xl text-navy-light font-light leading-relaxed">
-                Monaco PI exists to deliver truth with integrity. We believe every client deserves answers - whether it&apos;s protecting your family, your business, or your assets.
+                Monaco PI exists to deliver truth with integrity. We believe every client deserves answers, whether it&apos;s protecting your family, your business, or your assets.
               </p>
             </div>
             <div>
