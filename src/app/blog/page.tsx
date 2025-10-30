@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { blogPosts } from "@/data/blogPosts";
 
 export const metadata: Metadata = {
   title: "Investigation Insights & Expert Advice | Monaco PI Blog",
@@ -29,57 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPosts = [
-  {
-    title: "5 Signs You May Need a Private Investigator",
-    excerpt: "Discover the common situations where professional investigation services can provide the answers and evidence you need.",
-    category: "Investigation Tips",
-    date: "October 15, 2024",
-    readTime: "5 min read",
-    image: "/images/5-Signs-You-May-Need-a-Private-Investigator-khiet-tam-5rFbAKh0A-A-unsplash.jpg",
-  },
-  {
-    title: "How to Choose the Right Private Investigator",
-    excerpt: "Learn what to look for when hiring a private investigator to ensure you get professional, reliable results.",
-    category: "Hiring Guide",
-    date: "October 10, 2024",
-    readTime: "7 min read",
-    image: "/images/How-to-Choose-the-Right-Private-Investigator-marten-newhall-uAFjFsMS3YY-unsplash.jpg",
-  },
-  {
-    title: "What Makes Evidence Court-Admissible?",
-    excerpt: "Understanding the legal requirements for evidence in court proceedings and why proper protocols matter.",
-    category: "Legal Insights",
-    date: "October 5, 2024",
-    readTime: "6 min read",
-    image: "/images/What-Makes-Evidence-Court-Admissible-thom-masat-RLW1pzEXvEo-unsplash.jpg",
-  },
-  {
-    title: "Divorce Investigation: What You Need to Know",
-    excerpt: "A comprehensive guide to understanding how private investigators can help with divorce cases.",
-    category: "Family Law",
-    date: "September 28, 2024",
-    readTime: "8 min read",
-    image: "/images/Divorce-Investigation-engin-akyurt-Jw5Kth70hQo-unsplash.jpg",
-  },
-  {
-    title: "The Truth About Surveillance Operations",
-    excerpt: "Debunking common myths about surveillance and explaining how professional investigators conduct ethical operations.",
-    category: "Investigation Methods",
-    date: "September 20, 2024",
-    readTime: "6 min read",
-    image: "/images/The-Truth-bout-Surveillance-Operations-lianhao-qu-LfaN1gswV5c-unsplash.jpg",
-  },
-  {
-    title: "Background Checks: What They Reveal",
-    excerpt: "Learn what information background investigations can uncover and how they protect you.",
-    category: "Background Checks",
-    date: "September 15, 2024",
-    readTime: "5 min read",
-    image: "/images/Background-Checks-austin-distel-tLZhFRLj6nY-unsplash.jpg",
-  },
-];
-
 export default function BlogPage() {
   return (
     <div className="bg-cream">
@@ -102,39 +52,42 @@ export default function BlogPage() {
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
-              <article
+              <Link
                 key={index}
+                href={`/blog/${post.slug}`}
                 className="group cursor-pointer"
               >
-                <div className="aspect-[4/3] mb-8 rounded-sm overflow-hidden relative">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
-                  <div className="absolute top-6 right-6">
-                    <span className="bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-medium text-navy rounded-sm">
-                      {post.category}
-                    </span>
+                <article>
+                  <div className="aspect-[4/3] mb-8 rounded-sm overflow-hidden relative">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
+                    <div className="absolute top-6 right-6">
+                      <span className="bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-medium text-navy rounded-sm">
+                        {post.category}
+                      </span>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-cream text-sm font-light tracking-wider uppercase">Read Article</span>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-cream text-sm font-light tracking-wider uppercase">Read Article</span>
+                  <h3 className="text-2xl font-light text-navy mb-4 group-hover:text-navy-lighter transition-colors tracking-tight">
+                    {post.title}
+                  </h3>
+                  <p className="text-navy-lighter font-light leading-relaxed mb-6">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-navy-lighter/70 font-light">
+                    <span>{post.date}</span>
+                    <span>{post.readTime}</span>
                   </div>
-                </div>
-                <h3 className="text-2xl font-light text-navy mb-4 group-hover:text-navy-lighter transition-colors tracking-tight">
-                  {post.title}
-                </h3>
-                <p className="text-navy-lighter font-light leading-relaxed mb-6">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between text-xs text-navy-lighter/70 font-light">
-                  <span>{post.date}</span>
-                  <span>{post.readTime}</span>
-                </div>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
