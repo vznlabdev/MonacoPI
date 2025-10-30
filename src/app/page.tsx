@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { caseStudies } from "@/data/caseStudies";
 
 // Declare UnicornStudio type for window object
@@ -16,7 +16,19 @@ declare global {
 }
 
 export default function Home() {
-  const [unicornLoaded, setUnicornLoaded] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  // Reinitialize Unicorn Studio when component mounts (handles navigation back to homepage)
+  useEffect(() => {
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      if (window.UnicornStudio) {
+        window.UnicornStudio.init();
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="bg-cream">
@@ -24,9 +36,9 @@ export default function Home() {
         src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js"
         strategy="afterInteractive"
         onLoad={() => {
+          setScriptLoaded(true);
           if (window.UnicornStudio) {
             window.UnicornStudio.init();
-            setUnicornLoaded(true);
           }
         }}
       />
