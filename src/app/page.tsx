@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
+import { caseStudies } from "@/data/caseStudies";
 
 // Declare UnicornStudio type for window object
 declare global {
@@ -169,89 +170,38 @@ export default function Home() {
           <h2 className="text-xs font-medium tracking-[0.3em] uppercase text-navy-lighter/70 mb-24">Results</h2>
           
           <div className="grid md:grid-cols-3 gap-12">
-            {/* Case 1 */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
-                <Image
-                  src="/images/hidden-asset-sofya-kholodkova-HSlDZ7suCQQ-unsplash.jpg"
-                  alt="Hidden Asset Recovery Investigation"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
+            {caseStudies.map((caseStudy, index) => (
+              <Link
+                key={index}
+                href={`/case-studies/${caseStudy.slug}`}
+                className="group cursor-pointer"
+              >
+                <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
+                  <Image
+                    src={caseStudy.image}
+                    alt={caseStudy.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-2xl font-light text-navy mb-3 group-hover:text-navy-lighter transition-colors">
-                Hidden Asset Recovery
-              </h3>
-              <div className="flex gap-4 text-xs text-navy-lighter/70 font-light mb-4 tracking-wide">
-                <span>Denver</span>
-                <span>Divorce</span>
-                <span>2024</span>
-              </div>
-              <p className="text-navy-lighter font-light leading-relaxed">
-                Located $2.3M in concealed assets across multiple offshore accounts within 10 days, securing favorable settlement.
-              </p>
-            </div>
-
-            {/* Case 2 */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
-                <Image
-                  src="/images/corporate-fraud-kevin-matos-Nl_FMFpXo2g-unsplash.jpg"
-                  alt="Corporate Fraud Investigation"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
+                <h3 className="text-2xl font-light text-navy mb-3 group-hover:text-navy-lighter transition-colors">
+                  {caseStudy.title}
+                </h3>
+                <div className="flex gap-4 text-xs text-navy-lighter/70 font-light mb-4 tracking-wide">
+                  <span>{caseStudy.location}</span>
+                  <span>{caseStudy.category}</span>
+                  <span>{caseStudy.year}</span>
                 </div>
-              </div>
-              <h3 className="text-2xl font-light text-navy mb-3 group-hover:text-navy-lighter transition-colors">
-                Corporate Fraud Case
-              </h3>
-              <div className="flex gap-4 text-xs text-navy-lighter/70 font-light mb-4 tracking-wide">
-                <span>Boulder</span>
-                <span>Corporate</span>
-                <span>2024</span>
-              </div>
-              <p className="text-navy-lighter font-light leading-relaxed">
-                Documented extensive employee fraud scheme, resulting in full recovery and successful criminal prosecution.
-              </p>
-            </div>
-
-            {/* Case 3 */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] mb-8 rounded-sm overflow-hidden relative">
-                <Image
-                  src="/images/custody-investigation-daiga-ellaby-JZ51o_-UOY8-unsplash.jpg"
-                  alt="Custody Investigation Case"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
-                </div>
-              </div>
-              <h3 className="text-2xl font-light text-navy mb-3 group-hover:text-navy-lighter transition-colors">
-                Custody Investigation
-              </h3>
-              <div className="flex gap-4 text-xs text-navy-lighter/70 font-light mb-4 tracking-wide">
-                <span>Colorado Springs</span>
-                <span>Family Law</span>
-                <span>2024</span>
-              </div>
-              <p className="text-navy-lighter font-light leading-relaxed">
-                Comprehensive evidence gathering ensuring child safety and favorable custody arrangement for client.
-              </p>
-            </div>
+                <p className="text-navy-lighter font-light leading-relaxed">
+                  {caseStudy.shortDescription}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
