@@ -242,11 +242,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-navy/40 to-navy/60 group-hover:opacity-70 transition-opacity duration-500"></div>
                     <div className="absolute top-6 right-6">
                       <span className="bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-medium text-navy rounded-sm">
                         {relatedCase.category}
                       </span>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-cream text-sm font-light tracking-wider uppercase">View Case</span>
                     </div>
                   </div>
                   <h3 className="text-2xl font-light text-navy mb-3 group-hover:text-navy-lighter transition-colors tracking-tight">
