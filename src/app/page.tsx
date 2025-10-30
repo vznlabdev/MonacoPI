@@ -59,7 +59,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-20">
             <div>
               <p className="text-xl md:text-2xl text-navy-light font-light leading-relaxed">
-                Monaco PI exists to deliver truth with integrity. We believe every client deserves answers—whether it&apos;s protecting your family, your business, or your assets.
+                Monaco PI exists to deliver truth with integrity. We believe every client deserves answers - whether it&apos;s protecting your family, your business, or your assets.
               </p>
             </div>
             <div>
@@ -241,21 +241,21 @@ export default function Home() {
               <p className="text-navy-light font-light leading-relaxed mb-8 text-lg">
                 &quot;I finally got some sleep last night. First time in weeks. Thank you so much.&quot;
               </p>
-              <div className="text-xs text-navy-lighter/70 font-light tracking-wide">— Divorce Investigation Client</div>
+              <div className="text-xs text-navy-lighter/70 font-light tracking-wide">- Divorce Investigation Client</div>
             </div>
 
             <div className="bg-white p-10 rounded-sm border border-cream-dark hover:shadow-lg transition-shadow duration-300">
               <p className="text-navy-light font-light leading-relaxed mb-8 text-lg">
                 &quot;Everyone kept saying I was being paranoid. Well guess what? I WASN&apos;T.&quot;
               </p>
-              <div className="text-xs text-navy-lighter/70 font-light tracking-wide">— Custody Case Client</div>
+              <div className="text-xs text-navy-lighter/70 font-light tracking-wide">- Custody Case Client</div>
             </div>
 
             <div className="bg-white p-10 rounded-sm border border-cream-dark hover:shadow-lg transition-shadow duration-300">
               <p className="text-navy-light font-light leading-relaxed mb-8 text-lg">
                 &quot;That footage was perfect. He saw it and settled the same week. Done deal.&quot;
               </p>
-              <div className="text-xs text-navy-lighter/70 font-light tracking-wide">— Personal Injury Attorney</div>
+              <div className="text-xs text-navy-lighter/70 font-light tracking-wide">- Personal Injury Attorney</div>
             </div>
           </div>
         </div>

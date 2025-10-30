@@ -50,7 +50,7 @@ export const caseStudies: CaseStudy[] = [
         description: "Working closely with the client's divorce attorney, we provided regular updates and formatted our findings to support legal motions. Our detailed reports enabled the legal team to file for emergency discovery orders and challenge the opposing party's financial declarations."
       }
     ],
-    outcome: "Within just 10 days, our investigation uncovered $2.3 million in concealed assets across offshore accounts in the Cayman Islands, Switzerland, and Singapore. The evidence we gathered included documented transfers, shell company formations, and cryptocurrency holdings that had been deliberately omitted from financial disclosures. When presented with our comprehensive report, the opposing party's attorney immediately requested settlement negotiations. The case was resolved with our client receiving a significantly more favorable settlement than initially offered—one that accurately reflected the true marital estate. Our work not only secured financial justice but also saved months of potential litigation and discovery battles.",
+    outcome: "Within just 10 days, our investigation uncovered $2.3 million in concealed assets across offshore accounts in the Cayman Islands, Switzerland, and Singapore. The evidence we gathered included documented transfers, shell company formations, and cryptocurrency holdings that had been deliberately omitted from financial disclosures. When presented with our comprehensive report, the opposing party's attorney immediately requested settlement negotiations. The case was resolved with our client receiving a significantly more favorable settlement than initially offered - one that accurately reflected the true marital estate. Our work not only secured financial justice but also saved months of potential litigation and discovery battles.",
     metrics: [
       {
         label: "Assets Recovered",
@@ -78,7 +78,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Corporate",
     year: "2024",
     image: "/images/corporate-fraud-kevin-matos-Nl_FMFpXo2g-unsplash.jpg",
-    challenge: "A mid-sized tech company in Boulder noticed discrepancies in their accounts payable department—missing funds, duplicate vendor payments, and unexplained expenses. Initial internal audits suggested potential fraud, but the scope and parties involved remained unclear. The company's leadership needed to identify all perpetrators, recover stolen funds, and gather evidence sufficient for criminal prosecution—all while maintaining business operations and confidentiality to prevent destruction of evidence.",
+    challenge: "A mid-sized tech company in Boulder noticed discrepancies in their accounts payable department - missing funds, duplicate vendor payments, and unexplained expenses. Initial internal audits suggested potential fraud, but the scope and parties involved remained unclear. The company's leadership needed to identify all perpetrators, recover stolen funds, and gather evidence sufficient for criminal prosecution - all while maintaining business operations and confidentiality to prevent destruction of evidence.",
     approach: [
       {
         heading: "Covert Internal Investigation",
@@ -86,7 +86,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         heading: "Surveillance Operations",
-        description: "Based on financial analysis pointing to specific employees, we conducted targeted surveillance to document lifestyle inconsistencies with legitimate income. This included monitoring one suspect's purchase of a luxury vehicle and another's down payment on a vacation property—both well beyond their salary range."
+        description: "Based on financial analysis pointing to specific employees, we conducted targeted surveillance to document lifestyle inconsistencies with legitimate income. This included monitoring one suspect's purchase of a luxury vehicle and another's down payment on a vacation property - both well beyond their salary range."
       },
       {
         heading: "Digital Forensics & Communication Analysis",
@@ -97,7 +97,7 @@ export const caseStudies: CaseStudy[] = [
         description: "We investigated the supposed vendors receiving payments, discovering that several were shell companies with addresses at mail forwarding services. Bank account analysis revealed these accounts were controlled by the employees under investigation, confirming the fraudulent scheme."
       }
     ],
-    outcome: "Our investigation exposed a three-year fraud scheme involving four employees who had embezzled over $847,000 through fake vendors and manipulated invoices. The evidence we gathered—including financial records, surveillance documentation, digital communications, and witness statements—was presented to law enforcement. All four individuals were arrested and charged with felony theft and conspiracy. The company successfully recovered 94% of the stolen funds through asset seizures, restitution orders, and insurance claims. Additionally, our findings enabled the company to implement stronger internal controls and prevent future fraud. Three of the four defendants accepted plea agreements, and one case went to trial resulting in conviction. Our lead investigator provided expert testimony that was cited by the prosecutor as instrumental in securing the guilty verdict.",
+    outcome: "Our investigation exposed a three-year fraud scheme involving four employees who had embezzled over $847,000 through fake vendors and manipulated invoices. The evidence we gathered - including financial records, surveillance documentation, digital communications, and witness statements - was presented to law enforcement. All four individuals were arrested and charged with felony theft and conspiracy. The company successfully recovered 94% of the stolen funds through asset seizures, restitution orders, and insurance claims. Additionally, our findings enabled the company to implement stronger internal controls and prevent future fraud. Three of the four defendants accepted plea agreements, and one case went to trial resulting in conviction. Our lead investigator provided expert testimony that was cited by the prosecutor as instrumental in securing the guilty verdict.",
     metrics: [
       {
         label: "Funds Embezzled",
@@ -137,7 +137,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         heading: "Background Investigation",
-        description: "We performed comprehensive background checks on the father's new girlfriend who was now living in the home with the children. The investigation revealed a criminal history including a prior DUI conviction and a drug possession charge that had been dismissed—information that had not been disclosed to our client or the court."
+        description: "We performed comprehensive background checks on the father's new girlfriend who was now living in the home with the children. The investigation revealed a criminal history including a prior DUI conviction and a drug possession charge that had been dismissed - information that had not been disclosed to our client or the court."
       },
       {
         heading: "Neighborhood Canvas & Witness Interviews",

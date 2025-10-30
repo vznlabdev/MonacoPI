@@ -193,7 +193,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 {caseStudy.testimonial.quote}
               </p>
               <div className="text-sm text-cream/70 font-light">
-                — {caseStudy.testimonial.attribution}
+                - {caseStudy.testimonial.attribution}
               </div>
             </div>
           )}

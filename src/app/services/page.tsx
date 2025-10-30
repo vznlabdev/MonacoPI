@@ -109,7 +109,7 @@ export default function ServicesPage() {
                   Bulletproof evidence that insurance companies and opposing counsel can&apos;t dispute. Our footage speaks for itself.
                 </p>
                 <p className="text-sm text-navy-lighter/70 font-light italic">
-                  &quot;Sent them your video and they dropped it immediately. Didn&apos;t even argue lol&quot; — Workers&apos; Comp Defense
+                  &quot;Sent them your video and they dropped it immediately. Didn&apos;t even argue lol&quot; - Workers&apos; Comp Defense
                 </p>
               </div>
             </div>
