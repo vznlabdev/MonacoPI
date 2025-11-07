@@ -4,6 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
   description: "Bulletproof evidence for legal professionals. 95%+ case resolution rate, 24-48h deployment, expert witness testimony. Specialized in personal injury, family law, criminal defense, and civil litigation.",
+  keywords: [
+    "private investigator for attorneys",
+    "legal investigation",
+    "court-ready evidence",
+    "expert witness testimony",
+    "litigation support",
+    "attorney investigator"
+  ],
+  alternates: {
+    canonical: "https://monacopi.com/for-attorneys"
+  },
   openGraph: {
     title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
     description: "Bulletproof evidence for legal professionals. 95%+ case resolution rate, 24-48h deployment, expert witness testimony for all practice areas.",
@@ -25,6 +36,10 @@ export const metadata: Metadata = {
     title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
     description: "Bulletproof evidence for legal professionals. 95%+ case resolution rate, 24-48h deployment, expert witness testimony.",
     images: ["/images/opengraph.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

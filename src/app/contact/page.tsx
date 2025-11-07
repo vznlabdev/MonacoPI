@@ -1,8 +1,17 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect } from "react";
 
 export default function ContactPage() {
+  // Set page metadata dynamically for client component
+  useEffect(() => {
+    document.title = "Contact Monaco PI | Free Confidential Consultation | Monaco PI";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Contact Monaco PI for a free confidential consultation. Available 24/7 for investigation services in Colorado, Florida, and Texas. Call +1 720-594-4441.');
+    }
+  }, []);
 
   return (
     <div className="bg-cream">

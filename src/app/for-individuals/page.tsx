@@ -4,6 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
   description: "Compassionate, discreet investigation services for personal matters. Relationship concerns, missing person searches, background checks, and asset investigations. Get the answers you deserve.",
+  keywords: [
+    "private investigator for individuals",
+    "infidelity investigation",
+    "cheating spouse",
+    "missing person search",
+    "background check",
+    "asset investigation"
+  ],
+  alternates: {
+    canonical: "https://monacopi.com/for-individuals"
+  },
   openGraph: {
     title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
     description: "Compassionate, discreet investigation services for personal matters. Relationship concerns, missing person searches, and background investigations.",
@@ -25,6 +36,10 @@ export const metadata: Metadata = {
     title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
     description: "Compassionate, discreet investigation services for personal matters. Get the answers you deserve.",
     images: ["/images/opengraph.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

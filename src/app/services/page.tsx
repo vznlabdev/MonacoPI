@@ -4,6 +4,18 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Investigation Services | Field Surveillance, Background Checks & More",
   description: "Expert private investigation services: field surveillance, background investigations, scene investigation, insurance defense, process serving, and expert witness testimony. Court-ready evidence you can trust.",
+  keywords: [
+    "investigation services",
+    "field surveillance",
+    "background checks",
+    "scene investigation",
+    "insurance defense",
+    "process serving",
+    "expert witness testimony"
+  ],
+  alternates: {
+    canonical: "https://monacopi.com/services"
+  },
   openGraph: {
     title: "Investigation Services | Monaco PI",
     description: "Expert private investigation services: field surveillance, background investigations, scene investigation, insurance defense, process serving, and expert witness testimony.",
@@ -25,6 +37,10 @@ export const metadata: Metadata = {
     title: "Investigation Services | Monaco PI",
     description: "Expert private investigation services: field surveillance, background investigations, scene investigation, insurance defense, and more.",
     images: ["/images/opengraph.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
