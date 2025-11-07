@@ -87,3 +87,525 @@ html {
   background: var(--accent-primary);
 }
 
+/* ===========================================
+   PRINT STYLES - Legal Document Style
+   =========================================== */
+@media print {
+  /* Standard legal document page setup */
+  @page {
+    size: letter; /* 8.5" x 11" */
+    margin: 1in 1.25in; /* Legal margins: 1" top/bottom, 1.25" left/right */
+  }
+
+  /* General print optimizations */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  /* Body and root elements - Legal document style */
+  html,
+  body {
+    width: 100%;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    line-height: 1.4; /* Balanced spacing */
+    color: #000;
+    background: #fff;
+    text-align: left;
+  }
+
+  /* Hide navigation, footer, and non-essential elements */
+  nav,
+  header[role="banner"],
+  footer,
+  .no-print,
+  button,
+  .hover\:scale-105,
+  iframe,
+  video,
+  audio {
+    display: none !important;
+  }
+
+  /* Main content optimization */
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: none;
+  }
+
+  /* Typography - Balanced legal document style */
+  h1 {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 0 !important;
+    margin-bottom: 3pt !important; /* Minimal */
+    padding-top: 0 !important;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+    page-break-after: avoid;
+  }
+
+  /* Center subtitle/description after h1 */
+  h1 + p {
+    text-align: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 6pt !important; /* Reduced */
+    padding-top: 0 !important;
+  }
+
+  h2 {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 12pt; /* Balanced */
+    margin-bottom: 4pt; /* Balanced */
+    text-align: center; /* Centered */
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 8pt; /* Balanced */
+    margin-bottom: 3pt; /* Balanced */
+    text-align: left;
+    page-break-after: avoid;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 6pt; /* Balanced */
+    margin-bottom: 2pt; /* Balanced */
+    text-align: left;
+    page-break-after: avoid;
+  }
+
+  /* Paragraphs - Balanced legal style */
+  p {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    line-height: 1.4; /* Balanced - readable but tight */
+    margin-top: 0;
+    margin-bottom: 4pt; /* Balanced */
+    text-align: justify;
+    text-indent: 0;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* First paragraph after heading - centered for h1 and h2 */
+  h2 + p {
+    text-align: center !important;
+    margin-top: 0;
+    margin-bottom: 8pt !important;
+  }
+
+  h3 + p,
+  h4 + p,
+  h5 + p,
+  h6 + p {
+    margin-top: 0;
+  }
+
+  /* Lists - Balanced legal style */
+  ul, ol {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin-top: 4pt; /* Balanced */
+    margin-bottom: 4pt; /* Balanced */
+    margin-left: 0.5in;
+    padding-left: 0;
+    page-break-inside: auto;
+  }
+
+  li {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin-bottom: 2pt; /* Balanced */
+    padding-left: 0;
+  }
+
+  /* Nested lists */
+  ul ul, ol ol, ul ol, ol ul {
+    margin-left: 0.5in;
+    margin-top: 2pt;
+    margin-bottom: 0;
+  }
+
+  /* Links - Legal document style (plain black) */
+  a {
+    font-family: 'Times New Roman', Times, serif !important;
+    color: #000 !important; /* Black - no colors in legal docs */
+    text-decoration: none; /* No underline */
+    word-wrap: break-word;
+  }
+
+  /* Show URLs for external links */
+  a[href^="http"]:after,
+  a[href^="https"]:after {
+    content: " [" attr(href) "]";
+    font-size: 10pt;
+    color: #000;
+  }
+
+  /* Don't show URLs for internal links */
+  a[href^="#"]:after,
+  a[href^="/"]:after,
+  a[href^="tel:"]:after,
+  a[href^="mailto:"]:after {
+    content: "";
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Tables - Balanced legal style */
+  table {
+    font-family: 'Times New Roman', Times, serif !important;
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: auto;
+    margin-top: 6pt; /* Balanced */
+    margin-bottom: 6pt; /* Balanced */
+    font-size: 10pt;
+  }
+
+  thead {
+    display: table-header-group;
+    font-weight: normal;
+    border-bottom: 1pt solid #000;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  th {
+    border: none;
+    border-bottom: 1pt solid #000;
+    padding: 2pt 4pt; /* Reduced */
+    text-align: left;
+    font-weight: bold;
+    background-color: transparent !important;
+    line-height: 1.3;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1pt solid #CCCCCC;
+    padding: 2pt 4pt; /* Reduced */
+    text-align: left;
+    line-height: 1.3;
+    background-color: transparent !important;
+  }
+
+  /* Last row no border */
+  tbody tr:last-child td {
+    border-bottom: 1pt solid #000;
+  }
+
+  /* Page breaks - More flexible to prevent orphaned headings */
+  section {
+    page-break-inside: auto;
+    margin-bottom: 0;
+  }
+
+  /* Keep headings with content - critical for preventing lone headings */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Keep at least 2 lines with heading */
+  h1, h2, h3 {
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Allow paragraphs to break naturally */
+  p {
+    page-break-inside: auto;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Allow breaks in longer content */
+  blockquote, pre {
+    page-break-inside: auto;
+  }
+
+  /* Page numbers - legal document style */
+  @page {
+    @bottom-center {
+      content: counter(page);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 9pt; /* Smaller */
+      color: #000;
+    }
+  }
+
+  /* Section numbers and labels - ultra-minimal spacing */
+  .text-xs,
+  [class*="text-xs"] {
+    font-size: 9pt !important;
+    margin-top: 0 !important;
+    margin-bottom: 2pt !important;
+  }
+
+  /* Large numbers or decorative elements - compact */
+  .text-6xl,
+  .text-7xl,
+  [class*="text-6xl"],
+  [class*="text-7xl"] {
+    font-size: 14pt !important; /* Compact but visible */
+    line-height: 1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 3pt !important;
+    display: inline-block !important;
+  }
+
+  /* Text size reductions for print */
+  .text-4xl,
+  .text-5xl,
+  [class*="text-4xl"],
+  [class*="text-5xl"] {
+    font-size: 13pt !important;
+    line-height: 1.1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .text-xl,
+  .text-2xl,
+  .text-3xl,
+  [class*="text-xl"],
+  [class*="text-2xl"],
+  [class*="text-3xl"] {
+    font-size: 11pt !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Remove container spacing aggressively */
+  section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Remove large padding/margin classes */
+  [class*="py-"],
+  [class*="pt-"],
+  [class*="pb-"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  [class*="my-"],
+  [class*="mt-"],
+  [class*="mb-"] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Specifically target hero/header sections */
+  [class*="min-h-"],
+  [class*="flex items-center justify-center"] {
+    min-height: auto !important;
+    padding: 8pt 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Reduce grid gaps significantly */
+  [class*="gap-"] {
+    gap: 4pt !important;
+  }
+
+  /* Border-t classes spacing */
+  [class*="border-t"] {
+    margin-top: 8pt !important;
+    padding-top: 8pt !important;
+  }
+
+  /* Block quotes - Balanced legal style */
+  blockquote {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 11pt;
+    font-style: normal;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    margin-top: 6pt; /* Balanced */
+    margin-bottom: 6pt; /* Balanced */
+    padding: 0;
+    border-left: none;
+    line-height: 1.4;
+    page-break-inside: auto;
+  }
+
+  /* Code blocks - Balanced legal style */
+  pre,
+  code {
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 9pt;
+    line-height: 1.3;
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
+    margin: 6pt 0; /* Balanced */
+    page-break-inside: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Inline code */
+  code {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Utility classes for print */
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* Contact information - Legal style */
+  [href^="tel:"],
+  [href^="mailto:"] {
+    font-family: 'Times New Roman', Times, serif !important;
+    color: #000 !important;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  /* Strong and emphasis - minimal */
+  strong, b {
+    font-weight: bold;
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
+  /* Underline */
+  u {
+    text-decoration: underline;
+  }
+
+  /* Hide decorative elements */
+  .bg-gradient-to-br,
+  .bg-gradient-to-r,
+  [class*="shadow"],
+  [class*="backdrop"],
+  [data-us-project] {
+    display: none !important;
+  }
+
+  /* Optimize forms for print */
+  input,
+  textarea,
+  select {
+    border: 1pt solid #000 !important;
+    background: #fff !important;
+  }
+
+  /* Grid and flex layouts - linearize for print */
+  .grid,
+  .flex {
+    display: block !important;
+  }
+
+  /* Remove transform effects */
+  * {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Abbreviations */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* No decorative header - pure legal document */
+  body::before {
+    content: none;
+    display: none;
+  }
+
+  /* Horizontal rules - minimal */
+  hr {
+    border: none;
+    border-top: 1pt solid #000;
+    margin: 6pt 0; /* Balanced */
+    page-break-after: avoid;
+  }
+
+  /* Spacing adjustments - balanced */
+  * + h2 {
+    margin-top: 12pt; /* Balanced */
+  }
+  
+  * + h3,
+  * + h4 {
+    margin-top: 8pt; /* Balanced */
+  }
+
+  /* Text alignment classes */
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .text-left {
+    text-align: left !important;
+  }
+
+  .text-justify {
+    text-align: justify !important;
+  }
+}
+
+/* ===========================================
+   END PRINT STYLES
+   =========================================== */
+
