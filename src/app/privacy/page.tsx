@@ -259,7 +259,7 @@ export default function PrivacyPage() {
                   <strong>Monaco PI</strong>
                 </p>
                 <p className="text-sm text-navy-lighter font-light mb-2">
-                  Email: info@monacopi.com
+                  Email: monacocrystalpi@gmail.com
                 </p>
                 <p className="text-sm text-navy-lighter font-light mb-2">
                   Phone: (555) 123-4567

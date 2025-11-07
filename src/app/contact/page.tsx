@@ -1,61 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import Script from "next/script";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-    
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-        setTimeout(() => setSubmitStatus(null), 5000);
-      } else {
-        setSubmitStatus("error");
-        setTimeout(() => setSubmitStatus(null), 5000);
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus("error");
-      setTimeout(() => setSubmitStatus(null), 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="bg-cream">
@@ -76,18 +23,6 @@ export default function ContactPage() {
       {/* Contact Form */}
       <section className="py-32 md:py-40">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          {submitStatus === "success" && (
-            <div className="mb-12 p-6 bg-green-50 border border-green-200 text-green-800 rounded-sm text-center font-light">
-              Thanks for reaching out! We&apos;ll get back to you as soon as possible.
-            </div>
-          )}
-          
-          {submitStatus === "error" && (
-            <div className="mb-12 p-6 bg-red-50 border border-red-200 text-red-800 rounded-sm text-center font-light">
-              Sorry, something went wrong. Please try again or contact us directly.
-            </div>
-          )}
-
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Left Column - Text */}
             <div>
@@ -100,54 +35,32 @@ export default function ContactPage() {
             </div>
             
             {/* Right Column - Form */}
-            <div>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your full name"
-                    required
-                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your email address"
-                    required
-                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={6}
-                    placeholder="A little bit about your situation"
-                    required
-                    className="w-full px-6 py-4 bg-white border border-cream-dark text-navy placeholder-navy-lighter/50 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light resize-none"
-                  ></textarea>
-                </div>
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </button>
-                </div>
-              </form>
+            <div style={{ height: '588px' }}>
+              <iframe
+                src="https://link.1prompt.com/widget/form/SxXMXJRBjtxpWIRv7sdO"
+                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '0px' }}
+                id="inline-SxXMXJRBjtxpWIRv7sdO"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="MonacoPI.com Contact form"
+                data-height="588"
+                data-layout-iframe-id="inline-SxXMXJRBjtxpWIRv7sdO"
+                data-form-id="SxXMXJRBjtxpWIRv7sdO"
+                title="MonacoPI.com Contact form"
+              />
             </div>
           </div>
         </div>
+        
+        <Script
+          src="https://link.1prompt.com/js/form_embed.js"
+          strategy="afterInteractive"
+        />
       </section>
 
       {/* Contact Information */}
@@ -161,7 +74,7 @@ export default function ContactPage() {
                 Email
               </h3>
               <p className="text-navy-lighter font-light leading-relaxed mb-2">
-                info@monacopi.com
+                monacocrystalpi@gmail.com
               </p>
               <p className="text-sm text-navy-lighter/70 font-light">
                 Response within 24 hours

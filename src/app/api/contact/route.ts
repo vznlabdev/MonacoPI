@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     // In production, you would send an email here like:
     /*
     await sendEmail({
-      to: 'info@monacopi.com',
+      to: 'monacocrystalpi@gmail.com',
       from: 'noreply@monacopi.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,

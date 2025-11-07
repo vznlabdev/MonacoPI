@@ -76,7 +76,7 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-medium mb-8 text-cream/60 tracking-wider uppercase">Contact</h4>
             <ul className="space-y-4 text-cream/70 text-sm font-light">
-              <li>info@monacopi.com</li>
+              <li>monacocrystalpi@gmail.com</li>
               <li>(555) 123-4567</li>
               <li>Available 24/7</li>
             </ul>
