@@ -446,7 +446,7 @@ export default function TermsPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm"
+              className="inline-block px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-sm"
             >
               Request Consultation
             </Link>

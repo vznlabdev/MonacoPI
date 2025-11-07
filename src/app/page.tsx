@@ -293,7 +293,7 @@ export default function Home() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light transition-all duration-300 rounded-sm text-center"
+                className="inline-block w-full px-10 py-4 bg-navy text-cream text-sm font-normal tracking-wide hover:bg-navy-light hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-sm text-center"
               >
                 Get Started
               </Link>

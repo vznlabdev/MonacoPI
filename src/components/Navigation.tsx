@@ -111,7 +111,7 @@ export default function Navigation() {
             })}
             <a
               href="tel:+17205944441"
-              className="ml-4 px-6 py-2.5 bg-navy text-cream text-sm font-normal hover:bg-navy-light transition-all rounded-sm"
+              className="ml-4 px-6 py-2.5 bg-navy text-cream text-sm font-normal hover:bg-navy-light hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-sm"
             >
               Call Now
             </a>
@@ -198,7 +198,7 @@ export default function Navigation() {
             <a
               href="tel:+17205944441"
               onClick={() => setIsOpen(false)}
-              className="block w-full mt-4 px-4 py-3 bg-navy text-cream text-center text-base font-normal hover:bg-navy-light transition-all rounded-sm"
+              className="block w-full mt-4 px-4 py-3 bg-navy text-cream text-center text-base font-normal hover:bg-navy-light hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-sm"
             >
               Call Now
             </a>

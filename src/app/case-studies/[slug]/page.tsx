@@ -209,7 +209,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-navy text-cream text-sm font-normal hover:bg-navy-light transition-all rounded-sm"
+              className="inline-block px-8 py-4 bg-navy text-cream text-sm font-normal hover:bg-navy-light hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-sm"
             >
               Start Your Investigation
             </Link>
