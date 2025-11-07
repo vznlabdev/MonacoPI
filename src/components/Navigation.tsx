@@ -109,12 +109,12 @@ export default function Navigation() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
+            <a
+              href="tel:+17205944441"
               className="ml-4 px-6 py-2.5 bg-navy text-cream text-sm font-normal hover:bg-navy-light transition-all rounded-sm"
             >
-              Get Started
-            </Link>
+              Call Now
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -195,13 +195,13 @@ export default function Navigation() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
+            <a
+              href="tel:+17205944441"
               onClick={() => setIsOpen(false)}
               className="block w-full mt-4 px-4 py-3 bg-navy text-cream text-center text-base font-normal hover:bg-navy-light transition-all rounded-sm"
             >
-              Get Started
-            </Link>
+              Call Now
+            </a>
           </div>
         </div>
       )}

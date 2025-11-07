@@ -76,8 +76,16 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-medium mb-8 text-cream/60 tracking-wider uppercase">Contact</h4>
             <ul className="space-y-4 text-cream/70 text-sm font-light">
-              <li>monacocrystalpi@gmail.com</li>
-              <li>(555) 123-4567</li>
+              <li>
+                <a href="mailto:monacocrystalpi@gmail.com" className="hover:text-cream transition-colors">
+                  monacocrystalpi@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+17205944441" className="hover:text-cream transition-colors">
+                  +1 720-594-4441
+                </a>
+              </li>
               <li>Available 24/7</li>
             </ul>
           </div>

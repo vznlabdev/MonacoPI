@@ -73,9 +73,12 @@ export default function ContactPage() {
               <h3 className="text-xl font-light text-navy mb-4 tracking-tight">
                 Email
               </h3>
-              <p className="text-navy-lighter font-light leading-relaxed mb-2">
+              <a 
+                href="mailto:monacocrystalpi@gmail.com"
+                className="text-navy-lighter font-light leading-relaxed mb-2 hover:text-navy transition-colors block"
+              >
                 monacocrystalpi@gmail.com
-              </p>
+              </a>
               <p className="text-sm text-navy-lighter/70 font-light">
                 Response within 24 hours
               </p>
@@ -85,9 +88,12 @@ export default function ContactPage() {
               <h3 className="text-xl font-light text-navy mb-4 tracking-tight">
                 Phone
               </h3>
-              <p className="text-navy-lighter font-light leading-relaxed mb-2">
-                (555) 123-4567
-              </p>
+              <a 
+                href="tel:+17205944441"
+                className="text-navy-lighter font-light leading-relaxed mb-2 hover:text-navy transition-colors block"
+              >
+                +1 720-594-4441
+              </a>
               <p className="text-sm text-navy-lighter/70 font-light">
                 Available 24/7 for emergencies
               </p>

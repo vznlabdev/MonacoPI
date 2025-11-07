@@ -259,10 +259,10 @@ export default function PrivacyPage() {
                   <strong>Monaco PI</strong>
                 </p>
                 <p className="text-sm text-navy-lighter font-light mb-2">
-                  Email: monacocrystalpi@gmail.com
+                  Email: <a href="mailto:monacocrystalpi@gmail.com" className="hover:text-navy transition-colors">monacocrystalpi@gmail.com</a>
                 </p>
                 <p className="text-sm text-navy-lighter font-light mb-2">
-                  Phone: (555) 123-4567
+                  Phone: <a href="tel:+17205944441" className="hover:text-navy transition-colors">+1 720-594-4441</a>
                 </p>
                 <p className="text-sm text-navy-lighter font-light">
                   Available 24/7 for existing clients
