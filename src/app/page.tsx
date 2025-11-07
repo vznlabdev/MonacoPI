@@ -58,6 +58,18 @@ export default function Home() {
         />
       </section>
 
+      {/* SEO Heading Section */}
+      <section className="py-12 bg-navy-light text-center">
+        <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-cream mb-3 tracking-tight">
+            Licensed Private Investigator | Professional Investigation Services
+          </h1>
+          <p className="text-lg md:text-xl text-cream/90 font-light max-w-3xl mx-auto leading-relaxed">
+            Surveillance, background checks, corporate fraud, and legal support. Serving multiple states nationwide.
+          </p>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-32 md:py-40" id="about-section">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
