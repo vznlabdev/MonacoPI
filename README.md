@@ -1,17 +1,20 @@
 # Monaco PI - Private Investigation Services Website
 
-A professional, modern website for Monaco PI, an elite private investigation firm. Built with Next.js 14, TypeScript, and Tailwind CSS, featuring a sophisticated navy and cream color scheme.
+A professional, modern website for Monaco PI, an elite private investigation firm. Built with Next.js 15, TypeScript, and Tailwind CSS, featuring a sophisticated navy and cream color scheme.
 
 ## Features
 
-- 🎨 **Modern Design** - Clean, professional aesthetic with smooth animations
-- 📱 **Fully Responsive** - Optimized for all devices from mobile to 4K displays
-- 🎯 **SEO Optimized** - Meta tags and semantic HTML for better search rankings
-- ⚡ **Fast Performance** - Built with Next.js 14 App Router and optimized images
-- 🎨 **Custom Color Scheme** - Sophisticated navy (#070d3f) and cream (#fef3e9) palette
-- 📐 **Max-width Layout** - Content containers capped at 1920px for optimal reading
-- ♿ **Accessible** - WCAG compliant with proper semantic markup
-- 🔍 **Service Focused** - Dedicated pages for attorneys, individuals, and corporations
+- **Modern Design** - Clean, professional aesthetic with smooth animations and enhanced hover states
+- **Fully Responsive** - Optimized for all devices from mobile to 4K displays
+- **SEO Optimized** - Meta tags and semantic HTML for better search rankings
+- **Fast Performance** - Built with Next.js 15 App Router and optimized images
+- **Custom Color Scheme** - Sophisticated navy (#070d3f) and cream (#fef3e9) palette
+- **Max-width Layout** - Content containers capped at 1920px for optimal reading
+- **Accessible** - WCAG compliant with proper semantic markup
+- **Service Focused** - Dedicated pages for attorneys, individuals, and corporations
+- **Click-to-Call/Email** - All contact information is clickable for instant communication
+- **Embedded Forms** - Integrated 1prompt.com forms for contact and newsletter subscriptions
+- **Interactive CTAs** - Enhanced button hover states with scale and shadow effects
 
 ## Design System
 
@@ -72,11 +75,11 @@ The easiest way to deploy is to connect your Git repository to Vercel:
 ### Vercel Configuration
 
 This project includes:
-- ✅ **vercel.json** - Vercel-specific configuration
-- ✅ **Node.js version specified** - Ensures consistent builds (`engines` in package.json)
-- ✅ **Optimized build settings** - Standalone output mode for faster deployments
-- ✅ **TypeScript & ESLint checks** - Enforced during builds to prevent errors
-- ✅ **.nvmrc** - Node version manager configuration
+- **vercel.json** - Vercel-specific configuration
+- **Node.js version specified** - Ensures consistent builds (`engines` in package.json)
+- **Optimized build settings** - Standalone output mode for faster deployments
+- **TypeScript & ESLint checks** - Enforced during builds to prevent errors
+- **.nvmrc** - Node version manager configuration
 
 ### Build Requirements
 
@@ -106,9 +109,10 @@ npm run type-check  # Run TypeScript type checking
 
 ## Tech Stack
 
-- **Next.js 14** - React framework with App Router
+- **Next.js 15** - React framework with App Router
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Utility-first CSS framework
+- **1prompt.com** - Embedded forms for contact and newsletter
 - **ESLint** - Code linting
 - **SWC** - Fast JavaScript/TypeScript compiler
 
@@ -120,24 +124,40 @@ MonacoPI/
 │   ├── app/
 │   │   ├── about/
 │   │   │   └── page.tsx           # About page
+│   │   ├── api/
+│   │   │   ├── contact/
+│   │   │   │   └── route.ts       # Contact API endpoint (legacy)
+│   │   │   └── newsletter/
+│   │   │       └── route.ts       # Newsletter API endpoint (legacy)
 │   │   ├── blog/
+│   │   │   ├── [slug]/
+│   │   │   │   └── page.tsx       # Individual blog post
 │   │   │   └── page.tsx           # Blog listing page
+│   │   ├── case-studies/
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx       # Case study details
 │   │   ├── contact/
-│   │   │   └── page.tsx           # Contact form page
+│   │   │   └── page.tsx           # Contact page with 1prompt.com form
 │   │   ├── for-attorneys/
 │   │   │   └── page.tsx           # Attorney services page
 │   │   ├── for-corporations/
 │   │   │   └── page.tsx           # Corporate services page
 │   │   ├── for-individuals/
 │   │   │   └── page.tsx           # Individual services page
+│   │   ├── privacy/
+│   │   │   └── page.tsx           # Privacy policy page
 │   │   ├── services/
 │   │   │   └── page.tsx           # All services page
+│   │   ├── terms/
+│   │   │   └── page.tsx           # Terms of service page
 │   │   ├── globals.css            # Global styles + Tailwind
 │   │   ├── layout.tsx             # Root layout with nav/footer
 │   │   └── page.tsx               # Homepage
 │   └── components/
-│       ├── Footer.tsx             # Site footer
-│       └── Navigation.tsx         # Main navigation
+│       ├── Footer.tsx             # Site footer with clickable contacts
+│       ├── Logo.tsx               # Site logo component
+│       ├── Navigation.tsx         # Main nav with "Call Now" button
+│       └── NewsletterForm.tsx     # Newsletter form (1prompt.com)
 ├── public/
 │   └── images/
 │       └── hero-image.jpg         # Hero section image
@@ -153,11 +173,13 @@ MonacoPI/
 ## Pages
 
 ### Public Pages
-- **/** - Homepage with hero, services overview, results, and contact form
+- **/** - Homepage with hero, services overview, results, and FAQ section
 - **/about** - Company mission, story, leadership, and core values
 - **/services** - Comprehensive list of investigation services
-- **/blog** - Blog articles and industry insights
-- **/contact** - Contact form and office information
+- **/blog** - Blog articles and industry insights with newsletter signup
+- **/contact** - Embedded contact form (1prompt.com) and office information
+- **/privacy** - Privacy policy and data protection information
+- **/terms** - Terms of service and legal information
 
 ### Service Pages
 - **/for-attorneys** - Legal support and evidence collection services
@@ -236,12 +258,12 @@ The max-width is set to 1920px. To change it globally:
 
 This project includes several performance optimizations:
 
-- ✅ **Standalone Output** - Reduced deployment size
-- ✅ **SWC Minification** - Faster builds and smaller bundles
-- ✅ **Font Optimization** - Google Fonts preloaded and optimized
-- ✅ **Image Optimization** - Next.js automatic image optimization
-- ✅ **Static Generation** - Pages pre-rendered at build time
-- ✅ **Code Splitting** - Automatic route-based code splitting
+- **Standalone Output** - Reduced deployment size
+- **SWC Minification** - Faster builds and smaller bundles
+- **Font Optimization** - Google Fonts preloaded and optimized
+- **Image Optimization** - Next.js automatic image optimization
+- **Static Generation** - Pages pre-rendered at build time
+- **Code Splitting** - Automatic route-based code splitting
 
 ## Browser Support
 
@@ -267,6 +289,30 @@ This project includes several performance optimizations:
 ## License
 
 This project is proprietary and confidential. All rights reserved.
+
+## Contact Information
+
+- **Email**: monacocrystalpi@gmail.com
+- **Phone**: +1 720-594-4441
+- **Website**: [monacopi.com](https://monacopi.com)
+- **Licensed in**: Colorado, Florida, and Texas
+
+## Key Integrations
+
+### 1prompt.com Forms
+The site uses embedded 1prompt.com forms for:
+- **Contact Form** - Main contact/consultation requests
+- **Newsletter Form** - Blog page email subscriptions
+
+Form configurations:
+- Contact form ID: `SxXMXJRBjtxpWIRv7sdO`
+- Newsletter form ID: `s1LZukeoilYik57vWWdq`
+
+### Interactive Features
+- All phone numbers are `tel:` links for one-click calling
+- All email addresses are `mailto:` links for instant emailing
+- Navigation "Call Now" button directly dials +1 720-594-4441
+- Enhanced button hover states with scale (105%) and shadow effects
 
 ## Support
 

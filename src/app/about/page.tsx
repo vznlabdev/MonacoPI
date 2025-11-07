@@ -4,6 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Monaco PI | Elite Private Investigation Services",
   description: "Founded by Crystal Monaco with 17+ years of experience. Elite investigation services built on integrity, discretion, and a 95%+ case resolution rate. Licensed in Colorado, Florida, and Texas.",
+  keywords: [
+    "Crystal Monaco",
+    "Monaco PI",
+    "private investigation firm",
+    "licensed investigator",
+    "Colorado investigator",
+    "investigation company"
+  ],
+  alternates: {
+    canonical: "https://monacopi.com/about"
+  },
   openGraph: {
     title: "About Monaco PI | Elite Private Investigation Services",
     description: "Founded by Crystal Monaco with 17+ years of experience. Elite investigation services built on integrity, discretion, and a 95%+ case resolution rate.",
@@ -25,6 +36,10 @@ export const metadata: Metadata = {
     title: "About Monaco PI | Elite Private Investigation Services",
     description: "Founded by Crystal Monaco with 17+ years of experience. Elite investigation services built on integrity, discretion, and a 95%+ case resolution rate.",
     images: ["/images/opengraph.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

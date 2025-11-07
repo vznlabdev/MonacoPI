@@ -4,6 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
   description: "Protect your business with professional corporate investigations. Fraud detection, due diligence, workplace investigations, IP protection, and employee screening. Complete confidentiality guaranteed.",
+  keywords: [
+    "corporate investigation",
+    "fraud detection",
+    "due diligence",
+    "workplace investigation",
+    "employee screening",
+    "business intelligence"
+  ],
+  alternates: {
+    canonical: "https://monacopi.com/for-corporations"
+  },
   openGraph: {
     title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
     description: "Protect your business with professional corporate investigations. Fraud detection, due diligence, workplace investigations, and IP protection.",
@@ -25,6 +36,10 @@ export const metadata: Metadata = {
     title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
     description: "Protect your business with professional corporate investigations. Fraud detection, due diligence, and workplace investigations.",
     images: ["/images/opengraph.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

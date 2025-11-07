@@ -3,6 +3,7 @@ import { Inter, Crimson_Pro } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -20,11 +21,37 @@ const crimsonPro = Crimson_Pro({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monacopi.com"),
-  title: "Monaco PI | Elite Private Investigation Services in Colorado",
-  description: "Colorado&apos;s premier private investigation firm. 95%+ case resolution rate, 17+ years experience. Professional investigation services for attorneys, individuals, and corporations. Licensed, bonded, and insured.",
+  title: {
+    default: "Monaco PI | Elite Private Investigation Services in Colorado",
+    template: "%s | Monaco PI"
+  },
+  description: "Colorado's premier private investigation firm. 95%+ case resolution rate, 17+ years experience. Professional investigation services for attorneys, individuals, and corporations. Licensed, bonded, and insured.",
+  keywords: [
+    "private investigator Colorado",
+    "private detective",
+    "investigation services",
+    "surveillance",
+    "background checks",
+    "infidelity investigation",
+    "corporate investigation",
+    "missing person",
+    "legal investigation",
+    "Denver private investigator",
+    "licensed private investigator",
+    "process serving",
+    "fraud investigation"
+  ],
+  authors: [{ name: "Monaco PI" }],
+  creator: "Monaco PI",
+  publisher: "Monaco PI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "Monaco PI | Elite Private Investigation Services in Colorado",
-    description: "Colorado&apos;s premier private investigation firm. 95%+ case resolution rate, 17+ years experience. Licensed, bonded, and insured.",
+    description: "Colorado's premier private investigation firm. 95%+ case resolution rate, 17+ years experience. Licensed, bonded, and insured.",
     url: "https://monacopi.com",
     siteName: "Monaco PI",
     images: [
@@ -41,8 +68,24 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Monaco PI | Elite Private Investigation Services in Colorado",
-    description: "Colorado&apos;s premier private investigation firm. 95%+ case resolution rate, 17+ years experience.",
+    description: "Colorado's premier private investigation firm. 95%+ case resolution rate, 17+ years experience.",
     images: ["/images/opengraph.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'verification_token_here',
+    // yandex: 'verification_token_here',
+    // bing: 'verification_token_here',
   },
 };
 
@@ -53,6 +96,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${crimsonPro.variable}`}>
+      <head>
+        <StructuredData />
+      </head>
       <body className="flex flex-col min-h-screen">
         <Navigation />
         <main className="flex-grow">{children}</main>
