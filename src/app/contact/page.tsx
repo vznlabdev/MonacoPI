@@ -22,10 +22,10 @@ export default function ContactPage() {
 
       {/* Contact Form */}
       <section className="py-32 md:py-40">
-        <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left Column - Text */}
-            <div>
+            <div className="mb-8 lg:mb-0">
               <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
                 Partner with us
               </h2>
@@ -35,10 +35,10 @@ export default function ContactPage() {
             </div>
             
             {/* Right Column - Form */}
-            <div style={{ height: '588px' }}>
+            <div className="w-full min-h-[588px]">
               <iframe
                 src="https://link.1prompt.com/widget/form/SxXMXJRBjtxpWIRv7sdO"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '0px' }}
+                style={{ width: '100%', height: '588px', border: 'none', borderRadius: '0px' }}
                 id="inline-SxXMXJRBjtxpWIRv7sdO"
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
