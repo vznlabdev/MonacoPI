@@ -1,39 +1,8 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import Script from "next/script";
 
 export default function NewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-
-    try {
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        setStatus("success");
-        setEmail("");
-        setTimeout(() => setStatus("idle"), 5000);
-      } else {
-        setStatus("error");
-        setTimeout(() => setStatus("idle"), 5000);
-      }
-    } catch (error) {
-      console.error('Newsletter subscription error:', error);
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
-    }
-  };
-
   return (
     <section className="py-32 bg-navy">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-12 text-center">
@@ -44,39 +13,30 @@ export default function NewsletterForm() {
           Get expert investigation insights delivered to your inbox
         </p>
         
-        {status === "success" && (
-          <div className="mb-8 p-4 bg-green-50 border border-green-200 text-green-800 rounded-sm max-w-md mx-auto font-light">
-            Successfully subscribed! Check your email to confirm.
-          </div>
-        )}
-        
-        {status === "error" && (
-          <div className="mb-8 p-4 bg-red-50 border border-red-200 text-red-800 rounded-sm max-w-md mx-auto font-light">
-            Something went wrong. Please try again.
-          </div>
-        )}
-        
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your email address"
-            required
-            disabled={status === "loading"}
-            className="flex-1 px-6 py-4 bg-navy-light border border-navy-light text-cream placeholder-neutral-500 rounded-sm focus:outline-none focus:border-navy-lighter transition-colors font-light disabled:opacity-50"
+        <div className="max-w-2xl mx-auto" style={{ height: '492px' }}>
+          <iframe
+            src="https://link.1prompt.com/widget/form/s1LZukeoilYik57vWWdq"
+            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+            id="inline-s1LZukeoilYik57vWWdq"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="MonacoPI.com Newsletter Form"
+            data-height="492"
+            data-layout-iframe-id="inline-s1LZukeoilYik57vWWdq"
+            data-form-id="s1LZukeoilYik57vWWdq"
+            title="MonacoPI.com Newsletter Form"
           />
-          <button 
-            type="submit"
-            disabled={status === "loading"}
-            className="px-8 py-4 bg-white text-navy text-sm font-normal hover:bg-cream-dark transition-all rounded-sm disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {status === "loading" ? "Subscribing..." : "Subscribe"}
-          </button>
-        </form>
-        <p className="text-xs text-navy-lighter mt-6 font-light">
-          We respect your privacy. Unsubscribe at any time.
-        </p>
+        </div>
+        
+        <Script
+          src="https://link.1prompt.com/js/form_embed.js"
+          strategy="afterInteractive"
+        />
       </div>
     </section>
   );
