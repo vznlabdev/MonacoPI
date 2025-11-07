@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Crimson_Pro } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -57,6 +58,12 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="690db157d1e01cfa4120ec4d"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
