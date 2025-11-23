@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "For Attorneys | Court-Ready Evidence & Expert Witness Testimony",
@@ -46,6 +47,17 @@ export const metadata: Metadata = {
 export default function ForAttorneysPage() {
   return (
     <div className="bg-cream">
+      {/* Breadcrumbs */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+        <Breadcrumbs 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: "For Attorneys" }
+          ]} 
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
@@ -198,8 +210,107 @@ export default function ForAttorneysPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* FAQ Section */}
       <section className="py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <h2 className="text-4xl md:text-5xl font-light text-navy mb-16 tracking-tight text-center">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How quickly can you deploy for urgent cases?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                We offer 24-48 hour deployment for urgent matters. Our team is available 24/7 for emergency situations, and we understand that legal deadlines don&apos;t wait. Contact us immediately for rush cases.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Will your evidence hold up under cross-examination?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Absolutely. Our investigators follow strict chain-of-custody protocols, maintain detailed documentation, and testify regularly in court. We prepare evidence specifically to withstand legal scrutiny and cross-examination.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Do you provide expert witness testimony?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Yes. Our senior investigators are experienced expert witnesses with extensive courtroom experience. We provide clear, professional testimony and can explain complex investigation methodologies to judges and juries.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How do you bill for attorney cases?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                We offer flexible billing including hourly rates, flat fees for specific deliverables, and retainer arrangements. We provide detailed invoices suitable for client billing and work within your litigation budget constraints.
+              </p>
+            </div>
+
+            <div className="pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Are your reports formatted for legal proceedings?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Yes. All reports are prepared in legal format with proper documentation, exhibits, and chain-of-custody records. Reports include detailed methodology, findings, and supporting evidence organized for easy presentation in court.
+              </p>
+            </div>
+          </div>
+
+          {/* FAQ Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How quickly can you deploy for urgent cases?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer 24-48 hour deployment for urgent matters. Our team is available 24/7 for emergency situations, and we understand that legal deadlines don't wait. Contact us immediately for rush cases."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Will your evidence hold up under cross-examination?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely. Our investigators follow strict chain-of-custody protocols, maintain detailed documentation, and testify regularly in court. We prepare evidence specifically to withstand legal scrutiny and cross-examination."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you provide expert witness testimony?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. Our senior investigators are experienced expert witnesses with extensive courtroom experience. We provide clear, professional testimony and can explain complex investigation methodologies to judges and juries."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How do you bill for attorney cases?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer flexible billing including hourly rates, flat fees for specific deliverables, and retainer arrangements. We provide detailed invoices suitable for client billing and work within your litigation budget constraints."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Are your reports formatted for legal proceedings?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. All reports are prepared in legal format with proper documentation, exhibits, and chain-of-custody records. Reports include detailed methodology, findings, and supporting evidence organized for easy presentation in court."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-cream">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
             Strengthen your case

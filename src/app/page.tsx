@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { caseStudies } from "@/data/caseStudies";
 
 // Declare UnicornStudio type for window object
@@ -16,8 +16,6 @@ declare global {
 }
 
 export default function Home() {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
   // Reinitialize Unicorn Studio when component mounts (handles navigation back to homepage)
   useEffect(() => {
     // Small delay to ensure DOM is ready
@@ -36,7 +34,6 @@ export default function Home() {
         src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js"
         strategy="afterInteractive"
         onLoad={() => {
-          setScriptLoaded(true);
           if (window.UnicornStudio) {
             window.UnicornStudio.init();
           }
@@ -59,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* SEO Heading Section */}
-      <section className="py-12 bg-navy-light text-center">
+      <section className="py-12 bg-navy text-center">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-cream mb-3 tracking-tight">
             Licensed Private Investigator | Professional Investigation Services

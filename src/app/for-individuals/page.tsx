@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Private Investigation for Individuals | Infidelity, Missing Persons & More",
@@ -46,6 +47,17 @@ export const metadata: Metadata = {
 export default function ForIndividualsPage() {
   return (
     <div className="bg-cream">
+      {/* Breadcrumbs */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+        <Breadcrumbs 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: "For Individuals" }
+          ]} 
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
@@ -167,8 +179,107 @@ export default function ForIndividualsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* FAQ Section */}
       <section className="py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <h2 className="text-4xl md:text-5xl font-light text-navy mb-16 tracking-tight text-center">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How much does a private investigator cost?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Our rates vary based on case complexity and requirements. Most investigations range from $75-150 per hour, with surveillance cases typically requiring multiple hours. We provide detailed quotes during your free consultation and never charge hidden fees.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How long does an investigation take?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Timeline varies by case type. Background checks typically take 5-14 business days, while surveillance investigations depend on subject patterns and behavior. We provide estimated timelines during consultation and keep you updated throughout the process.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Will anyone find out I hired an investigator?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Absolutely not. Complete discretion is guaranteed. We use unmarked vehicles, encrypted communications, and maintain strict confidentiality. Your identity and case details are protected under investigator-client privilege.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Can the evidence you gather be used in court?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Yes. We follow legal protocols and chain-of-custody procedures to ensure all evidence is court-admissible. Our investigators are experienced expert witnesses and our reports are prepared to meet legal standards.
+              </p>
+            </div>
+
+            <div className="pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Do you offer payment plans?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Yes. We understand financial stress during difficult times. We offer flexible payment arrangements and work with you to structure a plan that fits your budget while ensuring thorough investigation.
+              </p>
+            </div>
+          </div>
+
+          {/* FAQ Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How much does a private investigator cost?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our rates vary based on case complexity and requirements. Most investigations range from $75-150 per hour, with surveillance cases typically requiring multiple hours. We provide detailed quotes during your free consultation and never charge hidden fees."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How long does an investigation take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Timeline varies by case type. Background checks typically take 5-14 business days, while surveillance investigations depend on subject patterns and behavior. We provide estimated timelines during consultation and keep you updated throughout the process."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Will anyone find out I hired an investigator?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely not. Complete discretion is guaranteed. We use unmarked vehicles, encrypted communications, and maintain strict confidentiality. Your identity and case details are protected under investigator-client privilege."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can the evidence you gather be used in court?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. We follow legal protocols and chain-of-custody procedures to ensure all evidence is court-admissible. Our investigators are experienced expert witnesses and our reports are prepared to meet legal standards."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you offer payment plans?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. We understand financial stress during difficult times. We offer flexible payment arrangements and work with you to structure a plan that fits your budget while ensuring thorough investigation."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-cream">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
             Get the answers you deserve

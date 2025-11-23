@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/data/blogPosts";
 import NewsletterForm from "@/components/NewsletterForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Investigation Insights & Expert Advice | Monaco PI Blog",
@@ -34,6 +35,16 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className="bg-cream">
+      {/* Breadcrumbs */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+        <Breadcrumbs 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Blog" }
+          ]} 
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>

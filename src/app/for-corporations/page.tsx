@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Corporate Investigation Services | Fraud Detection & Due Diligence",
@@ -46,6 +47,17 @@ export const metadata: Metadata = {
 export default function ForCorporationsPage() {
   return (
     <div className="bg-cream">
+      {/* Breadcrumbs */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+        <Breadcrumbs 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: "For Corporations" }
+          ]} 
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
@@ -167,8 +179,107 @@ export default function ForCorporationsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* FAQ Section */}
       <section className="py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <h2 className="text-4xl md:text-5xl font-light text-navy mb-16 tracking-tight text-center">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How do you maintain confidentiality during workplace investigations?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                We conduct covert investigations without alerting subjects or disrupting operations. Our team uses discreet methods, encrypted communications, and works outside business hours when needed. All findings remain confidential between you and our firm.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">What does a corporate fraud investigation cost?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Corporate investigations typically range from $5,000-25,000 depending on complexity and scope. We provide detailed proposals outlining estimated costs before beginning work and offer retainer-based arrangements for larger engagements.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Can you help recover stolen assets?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Yes. We trace hidden assets, document fraudulent transfers, and provide evidence for recovery efforts. Our investigations have led to millions in asset recovery for corporate clients, working closely with your legal and financial teams.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Do you work with our legal counsel?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Absolutely. We coordinate seamlessly with corporate attorneys to ensure attorney-client privilege protection and proper evidence handling. Our reports are formatted for legal proceedings and we provide testimony when needed.
+              </p>
+            </div>
+
+            <div className="pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How long does due diligence take?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Standard due diligence investigations take 7-14 business days. Expedited service is available for urgent M&A transactions. We provide preliminary findings within 48 hours and comprehensive reports upon completion.
+              </p>
+            </div>
+          </div>
+
+          {/* FAQ Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How do you maintain confidentiality during workplace investigations?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We conduct covert investigations without alerting subjects or disrupting operations. Our team uses discreet methods, encrypted communications, and works outside business hours when needed. All findings remain confidential between you and our firm."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What does a corporate fraud investigation cost?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Corporate investigations typically range from $5,000-25,000 depending on complexity and scope. We provide detailed proposals outlining estimated costs before beginning work and offer retainer-based arrangements for larger engagements."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can you help recover stolen assets?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. We trace hidden assets, document fraudulent transfers, and provide evidence for recovery efforts. Our investigations have led to millions in asset recovery for corporate clients, working closely with your legal and financial teams."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you work with our legal counsel?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely. We coordinate seamlessly with corporate attorneys to ensure attorney-client privilege protection and proper evidence handling. Our reports are formatted for legal proceedings and we provide testimony when needed."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How long does due diligence take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Standard due diligence investigations take 7-14 business days. Expedited service is available for urgent M&A transactions. We provide preliminary findings within 48 hours and comprehensive reports upon completion."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-cream">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
             Protect your business
