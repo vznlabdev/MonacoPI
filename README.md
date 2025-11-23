@@ -159,8 +159,8 @@ MonacoPI/
 │       ├── Navigation.tsx         # Main nav with "Call Now" button
 │       └── NewsletterForm.tsx     # Newsletter form (1prompt.com)
 ├── public/
-│   └── images/
-│       └── hero-image.jpg         # Hero section image
+│   ├── images/                    # Blog and case study images
+│   └── videos/                    # Video assets
 ├── .nvmrc                         # Node version (18.17.0)
 ├── DEPLOYMENT.md                  # Deployment documentation
 ├── VERCEL_REQUIREMENTS.md         # Vercel setup guide

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Investigation Services | Field Surveillance, Background Checks & More",
@@ -47,6 +48,16 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="bg-cream">
+      {/* Breadcrumbs */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+        <Breadcrumbs 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Services" }
+          ]} 
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
@@ -240,8 +251,107 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* FAQ Section */}
       <section className="py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <h2 className="text-4xl md:text-5xl font-light text-navy mb-16 tracking-tight text-center">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">What types of investigations do you handle?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                We handle all types of private investigations including surveillance, background checks, infidelity investigations, corporate fraud, missing persons, asset searches, process serving, and expert witness testimony. Each investigation is customized to your specific needs.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Are you licensed and insured?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Yes. We are fully licensed in Colorado, Florida, and Texas. We carry comprehensive liability insurance and bonding, and all our investigators maintain current state licenses and undergo continuous training.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">How do I get started?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                Contact us for a free, confidential consultation. We&apos;ll discuss your situation, explain our process, provide an estimated timeline and cost, and answer all your questions. There&apos;s no obligation and your consultation is completely confidential.
+              </p>
+            </div>
+
+            <div className="border-b border-cream-dark pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">Will the subject know they&apos;re being investigated?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                No. Professional investigators are trained in covert operations and use specialized techniques to remain undetected. We use unmarked vehicles, maintain safe distances, and blend into environments to ensure subjects remain unaware of surveillance.
+              </p>
+            </div>
+
+            <div className="pb-8">
+              <h3 className="text-xl font-light text-navy mb-4">What states do you serve?</h3>
+              <p className="text-navy-lighter font-light leading-relaxed">
+                We are licensed in Colorado, Florida, and Texas, and can deploy investigations in all 50 states through our nationwide network of licensed investigators. Multi-state cases are handled seamlessly with proper licensing coordination.
+              </p>
+            </div>
+          </div>
+
+          {/* FAQ Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What types of investigations do you handle?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We handle all types of private investigations including surveillance, background checks, infidelity investigations, corporate fraud, missing persons, asset searches, process serving, and expert witness testimony. Each investigation is customized to your specific needs."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Are you licensed and insured?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. We are fully licensed in Colorado, Florida, and Texas. We carry comprehensive liability insurance and bonding, and all our investigators maintain current state licenses and undergo continuous training."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How do I get started?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Contact us for a free, confidential consultation. We'll discuss your situation, explain our process, provide an estimated timeline and cost, and answer all your questions. There's no obligation and your consultation is completely confidential."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Will the subject know they're being investigated?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No. Professional investigators are trained in covert operations and use specialized techniques to remain undetected. We use unmarked vehicles, maintain safe distances, and blend into environments to ensure subjects remain unaware of surveillance."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What states do you serve?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We are licensed in Colorado, Florida, and Texas, and can deploy investigations in all 50 states through our nationwide network of licensed investigators. Multi-state cases are handled seamlessly with proper licensing coordination."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-cream">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-4xl md:text-5xl font-light text-navy mb-8 tracking-tight">
             Ready to get started?

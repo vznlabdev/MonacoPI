@@ -1,20 +1,24 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
+import { useState } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function ContactPage() {
-  // Set page metadata dynamically for client component
-  useEffect(() => {
-    document.title = "Contact Monaco PI | Free Confidential Consultation | Monaco PI";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact Monaco PI for a free confidential consultation. Available 24/7 for investigation services in Colorado, Florida, and Texas. Call +1 720-594-4441.');
-    }
-  }, []);
+  const [isFormLoaded, setIsFormLoaded] = useState(false);
 
   return (
     <div className="bg-cream">
+      {/* Breadcrumbs */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12">
+        <Breadcrumbs 
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Contact" }
+          ]} 
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center bg-navy relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy"></div>
@@ -44,7 +48,25 @@ export default function ContactPage() {
             </div>
             
             {/* Right Column - Form */}
-            <div className="w-full min-h-[588px]">
+            <div className="w-full min-h-[588px] relative">
+              {/* Loading skeleton */}
+              {!isFormLoaded && (
+                <div className="absolute inset-0 bg-white border border-cream-dark rounded-sm animate-pulse">
+                  <div className="p-6 space-y-4">
+                    <div className="h-4 bg-cream-dark rounded w-3/4"></div>
+                    <div className="h-10 bg-cream-dark rounded"></div>
+                    <div className="h-4 bg-cream-dark rounded w-3/4"></div>
+                    <div className="h-10 bg-cream-dark rounded"></div>
+                    <div className="h-4 bg-cream-dark rounded w-3/4"></div>
+                    <div className="h-10 bg-cream-dark rounded"></div>
+                    <div className="h-4 bg-cream-dark rounded w-3/4"></div>
+                    <div className="h-32 bg-cream-dark rounded"></div>
+                    <div className="flex justify-center pt-4">
+                      <div className="text-sm text-navy-lighter/70 font-light">Loading form...</div>
+                    </div>
+                  </div>
+                </div>
+              )}
               <iframe
                 src="https://link.1prompt.com/widget/form/SxXMXJRBjtxpWIRv7sdO"
                 style={{ width: '100%', height: '588px', border: 'none', borderRadius: '0px' }}
@@ -61,6 +83,7 @@ export default function ContactPage() {
                 data-layout-iframe-id="inline-SxXMXJRBjtxpWIRv7sdO"
                 data-form-id="SxXMXJRBjtxpWIRv7sdO"
                 title="MonacoPI.com Contact form"
+                onLoad={() => setIsFormLoaded(true)}
               />
             </div>
           </div>

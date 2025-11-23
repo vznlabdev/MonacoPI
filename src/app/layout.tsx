@@ -100,8 +100,15 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className="flex flex-col min-h-screen">
+        {/* Skip to Content Link - Accessibility */}
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-navy text-cream px-6 py-3 rounded-sm font-normal text-sm hover:bg-navy-light transition-colors focus:outline-none focus:ring-2 focus:ring-cream"
+        >
+          Skip to main content
+        </a>
         <Navigation />
-        <main className="flex-grow">{children}</main>
+        <main id="main-content" className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
