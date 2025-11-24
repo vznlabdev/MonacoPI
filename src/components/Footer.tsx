@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy border-t border-navy-light mt-auto">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-16">
           {/* Company Info */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6 text-cream hover:opacity-80 transition-opacity">
@@ -67,6 +67,28 @@ export default function Footer() {
               <li>
                 <Link href="/for-corporations" className="text-cream/70 hover:text-cream transition-colors text-sm font-light">
                   For Corporations
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h4 className="text-xs font-medium mb-8 text-cream/60 tracking-wider uppercase">Locations</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/locations/colorado" className="text-cream/70 hover:text-cream transition-colors text-sm font-light">
+                  Colorado
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/florida" className="text-cream/70 hover:text-cream transition-colors text-sm font-light">
+                  Florida
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/texas" className="text-cream/70 hover:text-cream transition-colors text-sm font-light">
+                  Texas
                 </Link>
               </li>
             </ul>

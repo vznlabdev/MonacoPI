@@ -19,7 +19,11 @@ const QUALITY = 80; // JPEG quality (80 is good balance of quality/size)
 // Images that need optimization (based on analysis)
 const IMAGES_TO_OPTIMIZE = [
   'corporate-fraud-kevin-matos-Nl_FMFpXo2g-unsplash.jpg',
-  'custody-investigation-daiga-ellaby-JZ51o_-UOY8-unsplash.jpg'
+  'custody-investigation-daiga-ellaby-JZ51o_-UOY8-unsplash.jpg',
+  // New location images
+  'maroon-bells-colorado.jpg',
+  'st-augustine-florida.jpg',
+  'austin-texas.jpg'
 ];
 
 async function optimizeImages() {

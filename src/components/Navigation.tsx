@@ -17,6 +17,16 @@ const navItems = [
       { name: "For Corporations", href: "/for-corporations" },
     ]
   },
+  { 
+    name: "Locations", 
+    href: "/locations",
+    dropdown: [
+      { name: "All Locations", href: "/locations" },
+      { name: "Colorado", href: "/locations/colorado" },
+      { name: "Florida", href: "/locations/florida" },
+      { name: "Texas", href: "/locations/texas" },
+    ]
+  },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
@@ -26,11 +36,13 @@ export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
 
   // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false);
     setServicesOpen(false);
+    setLocationsOpen(false);
   }, [pathname]);
 
   return (
@@ -50,12 +62,15 @@ export default function Navigation() {
                 (item.dropdown && item.dropdown.some(sub => pathname === sub.href));
               
               if (item.dropdown) {
+                const isDropdownOpen = item.name === 'Services' ? servicesOpen : locationsOpen;
+                const setDropdownOpen = item.name === 'Services' ? setServicesOpen : setLocationsOpen;
+                
                 return (
                   <div 
                     key={item.name}
                     className="relative group/dropdown"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
+                    onMouseEnter={() => setDropdownOpen(true)}
+                    onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <button
                       className={`text-sm font-normal transition-colors relative group ${
@@ -65,13 +80,13 @@ export default function Navigation() {
                       }`}
                     >
                       {item.name}
-                      <svg className={`inline-block ml-1 w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={`inline-block ml-1 w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                       </svg>
                       <span className={`absolute bottom-0 left-0 w-full h-px bg-navy transform origin-left transition-transform duration-300 ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                     </button>
                     
-                    {servicesOpen && (
+                    {isDropdownOpen && (
                       <div className="absolute top-full left-0 pt-2">
                         <div className="w-56 bg-white border border-cream-dark shadow-xl rounded-sm overflow-hidden">
                           {item.dropdown.map((subItem, index) => (
@@ -147,18 +162,21 @@ export default function Navigation() {
               const isActive = pathname === item.href;
               
               if (item.dropdown) {
+                const isDropdownOpen = item.name === 'Services' ? servicesOpen : locationsOpen;
+                const setDropdownOpen = item.name === 'Services' ? setServicesOpen : setLocationsOpen;
+                
                 return (
                   <div key={item.name}>
                     <button
-                      onClick={() => setServicesOpen(!servicesOpen)}
+                      onClick={() => setDropdownOpen(!isDropdownOpen)}
                       className="w-full text-left px-4 py-3 text-base font-normal text-navy-lighter hover:text-navy hover:bg-cream-dark/30 rounded-sm transition-all flex items-center justify-between"
                     >
                       {item.name}
-                      <svg className={`w-5 h-5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={`w-5 h-5 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    {servicesOpen && (
+                    {isDropdownOpen && (
                       <div className="ml-4 mt-2 space-y-1">
                         {item.dropdown.map((subItem) => (
                           <Link

@@ -24,15 +24,174 @@ export default function StructuredData() {
     "areaServed": [
       {
         "@type": "State",
-        "name": "Colorado"
+        "name": "Colorado",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "United States"
+        }
       },
       {
         "@type": "State",
-        "name": "Florida"
+        "name": "Florida",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "United States"
+        }
       },
       {
         "@type": "State",
-        "name": "Texas"
+        "name": "Texas",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "United States"
+        }
+      },
+      // Colorado Cities
+      {
+        "@type": "City",
+        "name": "Denver",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Colorado"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Colorado Springs",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Colorado"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Boulder",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Colorado"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Fort Collins",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Colorado"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Aurora",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Colorado"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Lakewood",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Colorado"
+        }
+      },
+      // Florida Cities
+      {
+        "@type": "City",
+        "name": "Miami",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Florida"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Tampa",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Florida"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Orlando",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Florida"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Jacksonville",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Florida"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Fort Lauderdale",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Florida"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "West Palm Beach",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Florida"
+        }
+      },
+      // Texas Cities
+      {
+        "@type": "City",
+        "name": "Austin",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Dallas",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Houston",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "San Antonio",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Fort Worth",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "El Paso",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
       }
     ],
     "serviceType": [
@@ -90,4 +249,5 @@ export default function StructuredData() {
     </>
   );
 }
+
 
