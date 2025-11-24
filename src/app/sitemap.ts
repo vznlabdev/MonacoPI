@@ -15,11 +15,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/for-attorneys',
     '/for-individuals',
     '/for-corporations',
+    '/locations',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: route === '' ? 1 : route === '/contact' ? 0.9 : 0.8,
+  }))
+
+  // Location pages
+  const locations = [
+    '/locations/colorado',
+    '/locations/florida',
+    '/locations/texas',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85, // High priority for local SEO
   }))
 
   // Blog posts
@@ -49,6 +62,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...routes, ...blogPosts, ...caseStudies]
+  return [...routes, ...locations, ...blogPosts, ...caseStudies]
 }
 
