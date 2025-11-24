@@ -146,7 +146,7 @@ export default function FloridaLocationPage() {
                 Colorado excellence. Florida expertise.
               </h3>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-6">
-                Monaco PI brings our proven track record of excellence to the Sunshine State. Our Florida operations combine Colorado's investigative standards with deep local knowledge of Florida's unique environment, laws, and communities.
+                Monaco PI brings our proven track record of excellence to the Sunshine State. Our Florida operations combine Colorado&apos;s investigative standards with deep local knowledge of Florida&apos;s unique environment, laws, and communities.
               </p>
               <p className="text-lg text-navy-lighter font-light leading-relaxed">
                 From the vibrant streets of Miami to the Gulf Coast beaches, our Florida-licensed investigators understand the diverse landscapes and cultures that make Florida investigations uniquely challenging.
@@ -185,9 +185,9 @@ export default function FloridaLocationPage() {
             <h3 className="text-3xl md:text-4xl font-light text-navy mb-8 tracking-tight">
               Professional investigations across Florida
             </h3>
-            <p className="text-lg text-navy-lighter font-light leading-relaxed max-w-3xl">
-              From South Florida's bustling metropolitan areas to the Panhandle's coastal communities, we provide comprehensive investigation services throughout the state. Our investigators understand Florida's diverse regions and unique investigative challenges.
-            </p>
+              <p className="text-lg text-navy-lighter font-light leading-relaxed max-w-3xl">
+                From South Florida&apos;s bustling metropolitan areas to the Panhandle&apos;s coastal communities, we provide comprehensive investigation services throughout the state. Our investigators understand Florida&apos;s diverse regions and unique investigative challenges.
+              </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -224,7 +224,7 @@ export default function FloridaLocationPage() {
                 Comprehensive services for Florida
               </h3>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-8">
-                Whether you're dealing with family law matters, corporate fraud, or personal concerns, our Florida-licensed investigators provide thorough, professional service throughout the Sunshine State.
+                Whether you&apos;re dealing with family law matters, corporate fraud, or personal concerns, our Florida-licensed investigators provide thorough, professional service throughout the Sunshine State.
               </p>
               <Link
                 href="/services"
@@ -258,34 +258,34 @@ export default function FloridaLocationPage() {
           </h2>
 
           <h3 className="text-4xl md:text-5xl font-light text-navy mb-16 tracking-tight">
-            Understanding Florida's unique environment
+            Understanding Florida&apos;s unique environment
           </h3>
 
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
                 title: "Coastal & Maritime",
-                description: "Florida's extensive coastline presents unique investigation opportunities. We handle maritime fraud, vessel investigations, and coastal property disputes with specialized expertise."
+                description: "Florida&apos;s extensive coastline presents unique investigation opportunities. We handle maritime fraud, vessel investigations, and coastal property disputes with specialized expertise."
               },
               {
                 title: "Tourism & Hospitality",
-                description: "Florida's tourism industry creates specific investigation needs. We work with hotels, resorts, and entertainment venues on security, fraud, and liability matters."
+                description: "Florida&apos;s tourism industry creates specific investigation needs. We work with hotels, resorts, and entertainment venues on security, fraud, and liability matters."
               },
               {
                 title: "Retirement & Elder Care",
-                description: "With Florida's large retirement population, we specialize in elder fraud investigations, nursing home negligence, and estate-related investigations."
+                description: "With Florida&apos;s large retirement population, we specialize in elder fraud investigations, nursing home negligence, and estate-related investigations."
               },
               {
                 title: "Real Estate & Development",
-                description: "Florida's dynamic real estate market requires specialized investigation services for title issues, development disputes, and property fraud."
+                description: "Florida&apos;s dynamic real estate market requires specialized investigation services for title issues, development disputes, and property fraud."
               },
               {
                 title: "Latin American Connections",
-                description: "South Florida's international community means we often handle cases with Latin American connections, working with bilingual investigators when needed."
+                description: "South Florida&apos;s international community means we often handle cases with Latin American connections, working with bilingual investigators when needed."
               },
               {
                 title: "Insurance Hub",
-                description: "Florida's complex insurance environment means extensive experience with insurance fraud, claims investigation, and workers' compensation cases."
+                description: "Florida&apos;s complex insurance environment means extensive experience with insurance fraud, claims investigation, and workers&apos; compensation cases."
               },
             ].map((item, index) => (
               <div key={index} className="bg-cream p-8 rounded-sm">
