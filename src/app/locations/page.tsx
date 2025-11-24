@@ -161,7 +161,7 @@ export default function LocationsPage() {
                 Why local presence matters
               </h2>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-6">
-                Private investigation isn't one-size-fits-all. Each state has unique laws, regulations, and local nuances that impact how investigations are conducted.
+                Private investigation isn&apos;t one-size-fits-all. Each state has unique laws, regulations, and local nuances that impact how investigations are conducted.
               </p>
               <p className="text-lg text-navy-lighter font-light leading-relaxed">
                 Our licensed investigators understand local jurisdictions, have established relationships with local resources, and know the terrain—both literally and figuratively.

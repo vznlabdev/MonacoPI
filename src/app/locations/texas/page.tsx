@@ -146,7 +146,7 @@ export default function TexasLocationPage() {
                 National standards. Texas expertise.
               </h3>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-6">
-                Monaco PI expands our proven Colorado excellence to Texas, one of the nation's most dynamic and diverse states. Our Texas operations combine national investigative standards with deep understanding of the Lone Star State's unique business environment, culture, and legal landscape.
+                Monaco PI expands our proven Colorado excellence to Texas, one of the nation&apos;s most dynamic and diverse states. Our Texas operations combine national investigative standards with deep understanding of the Lone Star State&apos;s unique business environment, culture, and legal landscape.
               </p>
               <p className="text-lg text-navy-lighter font-light leading-relaxed">
                 From the tech corridors of Austin to the energy capitals of Houston and Dallas, our Texas-licensed investigators understand the industries, communities, and challenges that make Texas investigations distinct.
@@ -185,9 +185,9 @@ export default function TexasLocationPage() {
             <h3 className="text-3xl md:text-4xl font-light text-navy mb-8 tracking-tight">
               Statewide investigation services
             </h3>
-            <p className="text-lg text-navy-lighter font-light leading-relaxed max-w-3xl">
-              From the Dallas-Fort Worth Metroplex to the Rio Grande Valley, we provide professional investigation services throughout Texas. Our investigators understand the state's regional differences and diverse communities.
-            </p>
+              <p className="text-lg text-navy-lighter font-light leading-relaxed max-w-3xl">
+                From the Dallas-Fort Worth Metroplex to the Rio Grande Valley, we provide professional investigation services throughout Texas. Our investigators understand the state&apos;s regional differences and diverse communities.
+              </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -224,7 +224,7 @@ export default function TexasLocationPage() {
                 Comprehensive services for Texas
               </h3>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-8">
-                Whether you're dealing with family matters, corporate fraud, or business disputes, our Texas-licensed investigators provide thorough, professional service backed by years of national experience.
+                Whether you&apos;re dealing with family matters, corporate fraud, or business disputes, our Texas-licensed investigators provide thorough, professional service backed by years of national experience.
               </p>
               <Link
                 href="/services"
@@ -258,7 +258,7 @@ export default function TexasLocationPage() {
           </h2>
 
           <h3 className="text-4xl md:text-5xl font-light text-navy mb-16 tracking-tight">
-            Understanding Texas's unique landscape
+            Understanding Texas&apos;s unique landscape
           </h3>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -269,19 +269,19 @@ export default function TexasLocationPage() {
               },
               {
                 title: "Technology Hub",
-                description: "Austin's tech boom and Dallas's corporate headquarters create unique investigation needs. We handle corporate espionage, intellectual property theft, and employment disputes in tech industries."
+                description: "Austin&apos;s tech boom and Dallas&apos;s corporate headquarters create unique investigation needs. We handle corporate espionage, intellectual property theft, and employment disputes in tech industries."
               },
               {
                 title: "Agriculture & Ranching",
-                description: "Texas's vast agricultural operations require specialized knowledge. We investigate livestock theft, equipment fraud, water rights disputes, and land use issues."
+                description: "Texas&apos;s vast agricultural operations require specialized knowledge. We investigate livestock theft, equipment fraud, water rights disputes, and land use issues."
               },
               {
                 title: "Border Dynamics",
-                description: "Texas's international border presents unique challenges. We work within legal boundaries on cases involving cross-border trade, immigration matters, and international business disputes."
+                description: "Texas&apos;s international border presents unique challenges. We work within legal boundaries on cases involving cross-border trade, immigration matters, and international business disputes."
               },
               {
                 title: "Real Estate & Development",
-                description: "From urban high-rises to rural land deals, Texas's booming real estate market requires investigation expertise for fraud prevention, title issues, and development disputes."
+                description: "From urban high-rises to rural land deals, Texas&apos;s booming real estate market requires investigation expertise for fraud prevention, title issues, and development disputes."
               },
               {
                 title: "Transportation & Logistics",

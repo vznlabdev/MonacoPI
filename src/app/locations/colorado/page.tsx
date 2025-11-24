@@ -146,10 +146,10 @@ export default function ColoradoLocationPage() {
                 Born in Colorado. Built on excellence.
               </h3>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-6">
-                Monaco PI was founded in Colorado, where we've built our reputation on delivering results for individuals, attorneys, and corporations across the Front Range.
+                Monaco PI was founded in Colorado, where we&apos;ve built our reputation on delivering results for individuals, attorneys, and corporations across the Front Range.
               </p>
               <p className="text-lg text-navy-lighter font-light leading-relaxed">
-                Our deep understanding of Colorado's unique landscape—from urban Denver to mountain communities—combined with established local relationships gives our clients a distinct advantage.
+                Our deep understanding of Colorado&apos;s unique landscape—from urban Denver to mountain communities—combined with established local relationships gives our clients a distinct advantage.
               </p>
             </div>
 
@@ -205,7 +205,7 @@ export default function ColoradoLocationPage() {
 
           <div className="mt-12 p-8 bg-cream rounded-sm">
             <p className="text-navy-lighter font-light leading-relaxed text-center">
-              Don't see your city listed? We serve all of Colorado. <Link href="/contact" className="text-navy hover:text-navy-light transition-colors underline">Contact us</Link> to discuss your investigation needs.
+              Don&apos;t see your city listed? We serve all of Colorado. <Link href="/contact" className="text-navy hover:text-navy-light transition-colors underline">Contact us</Link> to discuss your investigation needs.
             </p>
           </div>
         </div>
@@ -224,7 +224,7 @@ export default function ColoradoLocationPage() {
                 Comprehensive investigation services
               </h3>
               <p className="text-lg text-navy-lighter font-light leading-relaxed mb-8">
-                Whether you're an individual seeking answers, an attorney building a case, or a corporation protecting assets, we provide the full spectrum of investigation services in Colorado.
+                Whether you&apos;re an individual seeking answers, an attorney building a case, or a corporation protecting assets, we provide the full spectrum of investigation services in Colorado.
               </p>
               <Link
                 href="/services"
