@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: vznlabdev/MonacoPI  # Update with your GitHub username/repo
-  branch: main  # Or your default branch name
+  branch: decap  # Changed to match current branch
 
 # Optional: Use local backend for development
 # To test locally: npx decap-server
