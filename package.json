@@ -14,11 +14,16 @@
     "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
+    "@portabletext/react": "^5.0.0",
+    "@sanity/image-url": "^2.0.0",
+    "@sanity/vision": "^4.19.0",
     "next": "^15.0.3",
+    "next-sanity": "^11.6.10",
     "pino": "^10.1.0",
     "pino-pretty": "^13.1.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sanity": "^4.19.0"
   },
   "devDependencies": {
     "@types/node": "^22",
