@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/data/blogPosts";
+import { getAllBlogSlugs, getBlogPostBySlug, getAllBlogPosts } from "@/lib/markdown";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -11,14 +11,15 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
+  const slugs = getAllBlogSlugs();
+  return slugs.map((slug) => ({
+    slug,
   }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
           url: post.image,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: post.imageAlt || post.title,
         },
       ],
       locale: "en_US",
@@ -57,11 +58,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
+  
+  const allPosts = getAllBlogPosts();
 
   return (
     <div className="bg-cream">
@@ -125,32 +128,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Introduction */}
           <div className="mb-16">
             <p className="text-xl text-navy-lighter font-light leading-relaxed">
-              {post.content.introduction}
+              {post.introduction}
             </p>
           </div>
 
-          {/* Content Sections */}
-          <div className="space-y-12">
-            {post.content.sections.map((section, index) => (
-              <div key={index}>
-                <h2 className="text-2xl md:text-3xl font-light text-navy mb-6 tracking-tight">
-                  {section.heading}
-                </h2>
-                <p className="text-navy-lighter font-light leading-relaxed whitespace-pre-line">
-                  {section.content}
-                </p>
-              </div>
-            ))}
+          {/* Main Content (Markdown) */}
+          <div className="prose prose-lg prose-navy max-w-none mb-16">
+            <div 
+              className="space-y-6 text-navy-lighter font-light leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
           </div>
 
           {/* Conclusion */}
-          {post.content.conclusion && (
+          {post.conclusion && (
             <div className="mt-16 pt-12 border-t border-navy/10">
               <h2 className="text-2xl md:text-3xl font-light text-navy mb-6 tracking-tight">
                 Conclusion
               </h2>
               <p className="text-navy-lighter font-light leading-relaxed">
-                {post.content.conclusion}
+                {post.conclusion}
               </p>
             </div>
           )}
@@ -181,7 +178,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {blogPosts
+            {allPosts
               .filter((p) => p.slug !== post.slug)
               .slice(0, 3)
               .map((relatedPost, index) => (
