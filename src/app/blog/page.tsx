@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { blogPosts } from "@/data/blogPosts";
+import { getAllBlogPosts } from "@/lib/markdown";
 import NewsletterForm from "@/components/NewsletterForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -33,6 +33,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const blogPosts = getAllBlogPosts();
+
   return (
     <div className="bg-cream">
       {/* Breadcrumbs */}

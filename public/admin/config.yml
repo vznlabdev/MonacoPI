@@ -1,0 +1,102 @@
+backend:
+  name: github
+  repo: vznlabdev/MonacoPI  # Update with your GitHub username/repo
+  branch: decap  # Changed to match current branch
+
+# Optional: Use local backend for development
+# To test locally: npx decap-server
+local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+# Editorial workflow (optional - enables draft/review/publish)
+publish_mode: editorial_workflow
+
+collections:
+  # Blog Posts Collection
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true, hint: "URL-friendly version of title" }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: true, hint: "Short description for previews (max 200 chars)" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: true
+        options:
+          - "Investigation Tips"
+          - "Hiring Guide"
+          - "Legal Insights"
+          - "Family Law"
+          - "Investigation Methods"
+          - "Background Checks"
+      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+      - { label: "Read Time", name: "readTime", widget: "string", required: true, hint: "e.g., 5 min read" }
+      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+      - { label: "Introduction", name: "introduction", widget: "text", required: true, hint: "Opening paragraph" }
+      - { label: "Body Content", name: "body", widget: "markdown", required: true, hint: "Main article content with sections" }
+      - { label: "Conclusion", name: "conclusion", widget: "text", required: false, hint: "Closing paragraph" }
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Meta Title", name: "metaTitle", widget: "string", required: false, hint: "Max 60 chars" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false, hint: "Max 160 chars" }
+
+  # Case Studies Collection
+  - name: "caseStudies"
+    label: "Case Studies"
+    folder: "content/case-studies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Short Description", name: "shortDescription", widget: "text", required: true, hint: "Brief summary (max 200 chars)" }
+      - { label: "Location", name: "location", widget: "string", required: true, hint: "e.g., Denver, Boulder" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: true
+        options:
+          - "Divorce"
+          - "Corporate"
+          - "Family Law"
+          - "Criminal Defense"
+          - "Insurance"
+          - "Background Checks"
+      - { label: "Year", name: "year", widget: "string", required: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+      - { label: "The Challenge", name: "challenge", widget: "text", required: true }
+      - label: "Our Approach"
+        name: "approach"
+        widget: "list"
+        required: true
+        fields:
+          - { label: "Heading", name: "heading", widget: "string", required: true }
+          - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "The Outcome", name: "outcome", widget: "text", required: true }
+      - label: "Key Metrics"
+        name: "metrics"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Label", name: "label", widget: "string", required: true }
+          - { label: "Value", name: "value", widget: "string", required: true }
+      - label: "Client Testimonial"
+        name: "testimonial"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Quote", name: "quote", widget: "text", required: false }
+          - { label: "Attribution", name: "attribution", widget: "string", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false, required: false, hint: "Display prominently on homepage" }
+

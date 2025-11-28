@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { caseStudies } from "@/data/caseStudies";
+import { getAllCaseStudySlugs, getCaseStudyBySlug, getAllCaseStudies } from "@/lib/markdown";
 
 interface CaseStudyPageProps {
   params: Promise<{
@@ -11,14 +11,15 @@ interface CaseStudyPageProps {
 }
 
 export async function generateStaticParams() {
-  return caseStudies.map((caseStudy) => ({
-    slug: caseStudy.slug,
+  const slugs = getAllCaseStudySlugs();
+  return slugs.map((slug) => ({
+    slug,
   }));
 }
 
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const caseStudy = caseStudies.find((cs) => cs.slug === slug);
+  const caseStudy = getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     return {
@@ -56,11 +57,13 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = await params;
-  const caseStudy = caseStudies.find((cs) => cs.slug === slug);
+  const caseStudy = getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     notFound();
   }
+  
+  const allCaseStudies = getAllCaseStudies();
 
   return (
     <div className="bg-cream">
@@ -133,18 +136,20 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <article className="py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           {/* Metrics Bar */}
-          <div className="mb-20 grid grid-cols-2 md:grid-cols-4 gap-8 p-10 bg-white rounded-sm border border-cream-dark">
-            {caseStudy.metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-light text-navy mb-2">
-                  {metric.value}
+          {caseStudy.metrics && caseStudy.metrics.length > 0 && (
+            <div className="mb-20 grid grid-cols-2 md:grid-cols-4 gap-8 p-10 bg-white rounded-sm border border-cream-dark">
+              {caseStudy.metrics.map((metric, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-light text-navy mb-2">
+                    {metric.value}
+                  </div>
+                  <div className="text-xs text-navy-lighter/70 font-light tracking-wide uppercase">
+                    {metric.label}
+                  </div>
                 </div>
-                <div className="text-xs text-navy-lighter/70 font-light tracking-wide uppercase">
-                  {metric.label}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           {/* The Challenge */}
           <div className="mb-16">
@@ -225,7 +230,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
-            {caseStudies
+            {allCaseStudies
               .filter((cs) => cs.slug !== caseStudy.slug)
               .slice(0, 2)
               .map((relatedCase, index) => (
