@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^15.0.3",
+    "next": "15.0.7",
     "pino": "^10.1.0",
     "pino-pretty": "^13.1.2",
     "react": "^18.3.1",
